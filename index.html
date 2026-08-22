@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>採用サイト｜ケー・エム・エス株式会社</title>
+<meta name="description" content="ケー・エム・エス株式会社 新卒・中途採用サイト。金型の土台「モールドベース」で業界トップクラスのシェア。仕事も遊びもフルスロットル、家族のような絆の会社です。">
+<meta property="og:title" content="仕事も遊びも、フルスロットル。｜ケー・エム・エス株式会社 採用サイト">
+<meta property="og:description" content="楽しいことも辛いことも共有する家族のような会社。この絆こそが、高い技術力を生みだす最高の強みです。">
+<meta property="og:image" content="images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0F11;
+  --ink-2:#1A1C1F;
+  --paper:#fff;
+  --gray:#F3F4F5;
+  --gray-2:#E5E7E9;
+  --muted:#6B7076;
+  --green:#1FA54A;
+  --green-d:#14803A;
+  --red:#E2001A;
+  --maxw:1180px;
+  --pad:clamp(20px,5vw,64px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  color:var(--ink);background:var(--paper);line-height:1.9;
+  font-size:15px;letter-spacing:.02em;overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.en{font-family:Anton,"Noto Sans JP",sans-serif;font-weight:400;letter-spacing:.04em;line-height:1}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.sec{padding:clamp(72px,10vw,140px) 0}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;inset:0 0 auto 0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(16px,3vw,32px);height:68px;
+  transition:background .35s,box-shadow .35s,height .35s;
+}
+header.solid{background:rgba(255,255,255,.96);box-shadow:0 1px 0 var(--gray-2);height:60px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+header.solid .brand{color:var(--ink)}
+.brand .mark{display:block;height:30px;width:auto;transition:height .35s}
+header.solid .brand .mark{height:26px}
+.brand .sub{font-size:10px;letter-spacing:.22em;opacity:.8;font-weight:700}
+nav.gnav{display:flex;align-items:center;gap:clamp(14px,1.8vw,26px)}
+nav.gnav a{font-size:12px;font-weight:700;letter-spacing:.08em;color:#fff;transition:color .35s,opacity .2s}
+header.solid nav.gnav a{color:var(--ink)}
+nav.gnav a:hover{opacity:.55}
+.btn-entry{
+  display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff !important;
+  padding:12px 22px;font-size:12px;font-weight:900;letter-spacing:.12em;
+  clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);
+  transition:background .25s,transform .25s;
+}
+.btn-entry:hover{background:#b80015;transform:translateY(-2px);opacity:1 !important}
+.navtoggle{display:none;width:44px;height:44px;background:none;border:0;cursor:pointer;position:relative;z-index:2}
+.navtoggle span{display:block;height:2px;width:24px;background:#fff;margin:5px auto;transition:.3s}
+header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
+@media(max-width:900px){
+  nav.gnav{
+    position:fixed;inset:0;background:#fff;flex-direction:column;justify-content:center;gap:22px;
+    transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1);
+  }
+  nav.gnav a{color:var(--ink) !important;font-size:15px}
+  .navopen nav.gnav{transform:none}
+  .navtoggle{display:block}
+  .navopen .navtoggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .navopen .navtoggle span:nth-child(2){opacity:0}
+  .navopen .navtoggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.hero img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;
+  animation:heroZoom 18s ease-out forwards;
+}
+@keyframes heroZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,11,13,.62) 0%,rgba(10,11,13,.18) 38%,rgba(10,11,13,.86) 100%);
+}
+.hero .inner{position:relative;z-index:2;width:100%;padding:0 var(--pad) clamp(80px,11vh,120px);color:#fff}
+.hero .label{
+  display:inline-block;font-family:Anton;font-size:12px;letter-spacing:.3em;color:#fff;
+  border-left:3px solid var(--green);padding-left:12px;margin-bottom:24px;text-shadow:0 2px 14px rgba(0,0,0,.7);
+}
+.hero h1{
+  font-size:clamp(34px,7.4vw,86px);font-weight:900;line-height:1.18;letter-spacing:.01em;
+  text-shadow:0 4px 30px rgba(0,0,0,.5);
+}
+.hero h1 em{font-style:normal;color:var(--green);text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.hero p{margin-top:22px;font-size:clamp(13px,1.6vw,16px);font-weight:500;max-width:34em;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.hero .scroll{
+  position:absolute;right:var(--pad);bottom:0;z-index:3;color:#fff;font-family:Anton;font-size:10px;letter-spacing:.28em;
+  writing-mode:vertical-rl;padding-bottom:74px;
+}
+.hero .scroll::after{content:"";position:absolute;bottom:0;left:50%;width:1px;height:64px;background:rgba(255,255,255,.35);overflow:hidden}
+.hero .scroll span{position:absolute;bottom:0;left:50%;width:1px;height:64px;background:var(--green);transform-origin:top;animation:scrollLine 2.2s infinite}
+@keyframes scrollLine{0%{transform:scaleY(0)}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:#fff;padding:16px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.08)}
+.marquee ul{display:flex;list-style:none;width:max-content;animation:slide 32s linear infinite}
+.marquee li{font-family:Anton;font-size:clamp(20px,3vw,34px);letter-spacing:.06em;padding:0 26px;white-space:nowrap;display:flex;align-items:center;gap:26px}
+.marquee li::after{content:"";width:8px;height:8px;background:var(--green);transform:rotate(45deg)}
+.marquee li:nth-child(even){color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- 求む band ---------- */
+.wanted{background:var(--green);color:#fff;text-align:center;padding:clamp(72px,11vw,130px) var(--pad);position:relative;overflow:hidden}
+.wanted::before{
+  content:"KMS";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  font-family:Anton;font-size:min(46vw,520px);color:rgba(255,255,255,.08);line-height:1;pointer-events:none;
+}
+.wanted .k{position:relative;font-size:clamp(28px,6.2vw,72px);font-weight:900;line-height:1.4}
+.wanted .k small{display:block;font-size:clamp(11px,1.5vw,14px);letter-spacing:.3em;font-family:Anton;margin-bottom:18px;opacity:.85}
+.wanted .lead{position:relative;margin-top:28px;font-size:clamp(13px,1.6vw,16px);font-weight:500;line-height:2.1;max-width:44em;margin-inline:auto}
+
+/* ---------- section heads ---------- */
+.head{margin-bottom:clamp(34px,5vw,58px)}
+.head .num{font-family:Anton;font-size:12px;letter-spacing:.24em;color:var(--green);display:block;margin-bottom:10px}
+.head h2{font-size:clamp(26px,4.4vw,48px);font-weight:900;line-height:1.35;letter-spacing:.01em}
+.head .en-sub{font-family:Anton;font-size:clamp(46px,9vw,110px);line-height:.9;color:var(--gray-2);letter-spacing:.02em;margin-bottom:-6px}
+.head p{margin-top:18px;color:var(--muted);max-width:46em}
+.dark .head .en-sub{color:rgba(255,255,255,.1)}
+.dark .head p{color:rgba(255,255,255,.65)}
+.dark{background:var(--ink);color:#fff}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center}
+.about-grid + .about-grid{margin-top:clamp(56px,8vw,110px)}
+.about-grid.rev>div:first-child{order:2}
+.about-grid h3{font-size:clamp(20px,2.8vw,32px);font-weight:900;line-height:1.5;margin-bottom:20px}
+.about-grid h3 mark{background:linear-gradient(transparent 62%,rgba(31,165,74,.28) 0);padding:0 2px}
+.about-grid p{margin-bottom:16px}
+.figstack{display:grid;gap:14px}
+.figstack img{width:100%;object-fit:cover}
+.figstack .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.figstack .duo img{aspect-ratio:4/3}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}.about-grid.rev>div:first-child{order:0}}
+
+/* ---------- numbers ---------- */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+.nums div{background:var(--ink);padding:clamp(22px,3vw,36px) clamp(14px,2vw,26px)}
+.nums dt{font-size:11px;letter-spacing:.14em;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:14px}
+.nums dd{font-family:Anton;font-size:clamp(38px,5.6vw,66px);color:#fff;line-height:1;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.nums dd i{font-family:"Noto Sans JP";font-style:normal;font-size:clamp(13px,1.5vw,17px);font-weight:700;color:var(--green)}
+.nums dd.sm{font-family:"Noto Sans JP";font-weight:900;font-size:clamp(18px,2.1vw,26px);line-height:1.45;display:block}
+.nums div{display:flex;flex-direction:column}
+.nums .note{margin-top:auto;padding-top:12px}
+.nums .note{display:block;margin-top:12px;font-family:"Noto Sans JP";font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.02em}
+@media(max-width:900px){.nums{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(88px,9vw,132px);gap:10px}
+.gal figure{overflow:hidden;position:relative;background:var(--gray);margin:0}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.gal figure:hover img{transform:scale(1.06)}
+.g-a{grid-column:span 6;grid-row:span 3}
+.g-b{grid-column:span 3;grid-row:span 3}
+.g-c{grid-column:span 3;grid-row:span 3}
+.g-d,.g-e,.g-f{grid-column:span 4;grid-row:span 2}
+.g-g{grid-column:span 7;grid-row:span 2}
+.g-h{grid-column:span 5;grid-row:span 2}
+.gal figcaption{
+  position:absolute;left:0;bottom:0;background:rgba(14,15,17,.82);color:#fff;
+  font-size:10.5px;font-weight:700;letter-spacing:.1em;padding:7px 12px;
+}
+@media(max-width:760px){
+  .gal{grid-template-columns:repeat(6,1fr);grid-auto-rows:26vw}
+  .g-a{grid-column:span 6;grid-row:span 2}
+  .g-b,.g-c{grid-column:span 3;grid-row:span 2}
+  .g-d,.g-e,.g-f{grid-column:span 3;grid-row:span 1}
+  .g-g,.g-h{grid-column:span 3;grid-row:span 1}
+}
+
+/* ---------- interview ---------- */
+.itv-note{
+  border:1px dashed var(--gray-2);background:#fff;padding:14px 18px;font-size:12px;color:var(--muted);
+  margin-bottom:30px;line-height:1.8;
+}
+.itv-note b{color:var(--ink)}
+.itv{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px)}
+.itv{align-items:stretch}
+.itv article{background:#fff;cursor:pointer;transition:transform .3s,box-shadow .3s;border:1px solid var(--gray-2);display:flex;flex-direction:column}
+.itv article:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px rgba(0,0,0,.28)}
+.itv .ph{
+  aspect-ratio:3/4;position:relative;overflow:hidden;
+  background:repeating-linear-gradient(135deg,#E9EBEC 0 12px,#E3E6E7 12px 24px);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:18px;
+}
+.itv .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.itv .ph::before{
+  content:"";position:absolute;right:0;top:0;width:0;height:0;
+  border-style:solid;border-width:0 56px 56px 0;border-color:transparent var(--green) transparent transparent;
+}
+.itv .ph::after{
+  content:"";position:absolute;left:16px;right:16px;top:16px;bottom:16px;border:1px dashed rgba(14,15,17,.2);
+}
+.itv .ph .no{position:absolute;top:14px;left:16px;font-family:Anton;font-size:44px;color:rgba(14,15,17,.16);line-height:1}
+.itv .ph .ph-lbl{position:relative;color:rgba(14,15,17,.4);font-family:Anton;font-size:10px;letter-spacing:.24em}
+.itv .ph .ph-jp{position:relative;color:rgba(14,15,17,.55);font-size:12px;font-weight:700;letter-spacing:.06em;margin-top:4px}
+.itv .body{padding:20px 20px 24px;display:flex;flex-direction:column;flex:1}
+.itv .role{display:inline-block;font-size:10.5px;font-weight:900;letter-spacing:.1em;color:#fff;background:var(--ink);padding:5px 10px;margin-bottom:14px}
+.itv h3{font-size:16px;font-weight:900;line-height:1.6;margin-bottom:12px}
+.itv .who{font-size:11.5px;color:var(--muted);border-top:1px solid var(--gray-2);padding-top:12px;margin-top:14px}
+.itv .lead{font-size:13px;color:#4A4F55}
+.itv .more{font-family:Anton;font-size:10px;letter-spacing:.18em;color:var(--green);margin-top:auto;padding-top:14px;display:block}
+@media(max-width:980px){.itv{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.itv{grid-template-columns:1fr}}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.on{display:flex}
+.modal .bg{position:absolute;inset:0;background:rgba(10,11,13,.72);backdrop-filter:blur(3px)}
+.modal .card{position:relative;background:#fff;max-width:760px;width:100%;max-height:86vh;overflow-y:auto;padding:clamp(28px,5vw,56px)}
+.modal .close{position:absolute;top:14px;right:14px;background:var(--ink);color:#fff;border:0;width:38px;height:38px;font-size:18px;cursor:pointer}
+.modal .role{display:inline-block;font-size:10.5px;font-weight:900;letter-spacing:.1em;color:#fff;background:var(--green);padding:5px 10px;margin-bottom:16px}
+.modal h3{font-size:clamp(20px,3vw,30px);font-weight:900;line-height:1.5;margin-bottom:10px}
+.modal .who{color:var(--muted);font-size:12.5px;margin-bottom:26px}
+.modal .qa{border-top:1px solid var(--gray-2);padding-top:22px;margin-top:22px}
+.modal .qa:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.modal .q{font-weight:900;font-size:15px;margin-bottom:10px;display:flex;gap:10px}
+.modal .q::before{content:"Q";font-family:Anton;color:var(--green);font-size:17px}
+.modal .a{color:#33383D;font-size:14px}
+
+/* ---------- culture ---------- */
+.cul-hero{position:relative;height:clamp(300px,52vw,540px);overflow:hidden}
+.cul-hero img{width:100%;height:100%;object-fit:cover}
+.cul-hero .t{
+  position:absolute;inset:auto 0 0 0;padding:clamp(24px,5vw,56px) var(--pad);
+  background:linear-gradient(transparent,rgba(10,11,13,.85));color:#fff;
+}
+.cul-hero .t h3{font-size:clamp(22px,4.4vw,46px);font-weight:900;line-height:1.3}
+.cul-hero .t p{margin-top:12px;font-size:13px;max-width:44em}
+.cul{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px);margin-top:clamp(34px,5vw,56px)}
+.cul article{border-top:2px solid var(--ink);padding-top:18px}
+.cul .ttl{font-size:16px;font-weight:900;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.cul .ttl b{font-family:Anton;font-size:12px;color:var(--green);letter-spacing:.12em;font-weight:400}
+.cul p{font-size:13.5px;color:#4A4F55}
+.cul img{margin-bottom:16px;aspect-ratio:16/10;object-fit:cover;width:100%}
+.cul-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-2);border:1px solid var(--gray-2);margin-top:clamp(18px,2.6vw,28px)}
+.cul-list article{background:#fff;padding:clamp(20px,2.6vw,30px)}
+.cul-list .ttl{font-size:15px;font-weight:900;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.cul-list .ttl b{font-family:Anton;font-size:12px;color:var(--green);letter-spacing:.12em;font-weight:400}
+.cul-list p{font-size:13px;color:#4A4F55}
+@media(max-width:860px){.cul-list{grid-template-columns:1fr}}
+@media(max-width:860px){.cul{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cul{grid-template-columns:1fr}}
+
+/* ---------- message ---------- */
+.msg{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.msg h3{font-size:clamp(20px,3.2vw,36px);font-weight:900;line-height:1.5;margin-bottom:24px}
+.msg p{margin-bottom:16px;color:rgba(255,255,255,.78)}
+.msg .sign{margin-top:28px;font-size:13px;color:#fff;border-top:1px solid rgba(255,255,255,.2);padding-top:18px}
+.msg .sign b{font-size:19px;font-weight:900;letter-spacing:.1em;margin-left:10px}
+@media(max-width:820px){.msg{grid-template-columns:1fr}}
+
+/* ---------- jobs ---------- */
+.jobs{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--gray-2);border:1px solid var(--gray-2)}
+.jobs article{background:#fff;padding:clamp(24px,3.4vw,40px)}
+.jobs .no{font-family:Anton;font-size:13px;color:var(--green);letter-spacing:.2em;display:block;margin-bottom:12px}
+.jobs h3{font-size:clamp(18px,2.4vw,24px);font-weight:900;margin-bottom:14px}
+.jobs p{font-size:13.5px;color:#4A4F55;margin-bottom:16px}
+.jobs .place{font-size:11.5px;font-weight:700;letter-spacing:.06em;border:1px solid var(--gray-2);padding:8px 12px;display:inline-block;color:var(--muted)}
+@media(max-width:760px){.jobs{grid-template-columns:1fr}}
+.spec{width:100%;border-collapse:collapse;margin-top:clamp(34px,5vw,56px);font-size:13.5px}
+.spec th,.spec td{border-bottom:1px solid var(--gray-2);padding:16px 8px;text-align:left;vertical-align:top}
+.spec th{width:180px;font-weight:900;white-space:nowrap}
+@media(max-width:600px){.spec th{width:100px;font-size:12.5px}}
+
+/* ---------- flow ---------- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;counter-reset:f}
+@media(max-width:700px){.flow{grid-template-columns:repeat(2,1fr)}}
+.flow li{
+  list-style:none;background:var(--gray);padding:20px 16px;position:relative;counter-increment:f;
+  font-size:13.5px;font-weight:700;line-height:1.6;
+}
+.flow li::before{content:"0" counter(f);font-family:Anton;font-size:12px;color:var(--green);display:block;margin-bottom:8px;letter-spacing:.14em}
+.flow li:last-child{background:var(--green);color:#fff}
+.flow li:last-child::before{color:rgba(255,255,255,.75)}
+
+/* ---------- faq ---------- */
+.faq details{border-bottom:1px solid var(--gray-2)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:22px 44px 22px 0;font-weight:900;font-size:15px;position:relative;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:Anton;color:var(--green);margin-right:12px;font-size:17px}
+.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:12px;height:2px;background:var(--ink);transition:.3s}
+.faq summary .v{position:absolute;right:13px;top:50%;width:2px;height:12px;background:var(--ink);transform:translateY(-50%);transition:.3s}
+.faq details[open] summary .v{transform:translateY(-50%) rotate(90deg);opacity:0}
+.faq .a{padding:0 0 26px 30px;font-size:13.5px;color:#4A4F55;white-space:pre-line}
+
+/* ---------- entry ---------- */
+.entry{position:relative;text-align:center;color:#fff;overflow:hidden;background:var(--ink)}
+.entry img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34}
+.entry .in{position:relative;padding:clamp(72px,11vw,140px) var(--pad)}
+.entry .en-sub{font-family:Anton;font-size:clamp(46px,10vw,120px);line-height:.92;color:rgba(255,255,255,.16)}
+.entry h2{font-size:clamp(22px,4vw,42px);font-weight:900;margin:14px 0 20px;line-height:1.4}
+.entry p{font-size:13.5px;color:rgba(255,255,255,.75);max-width:40em;margin:0 auto 34px}
+.entry .btn-entry{padding:20px 46px;font-size:14px}
+
+/* ---------- footer ---------- */
+footer{background:#08090A;color:rgba(255,255,255,.62);font-size:12.5px;padding:clamp(48px,7vw,80px) 0 40px}
+footer .ft{display:grid;grid-template-columns:1.1fr 1fr;gap:36px}
+footer .brand{color:#fff;margin-bottom:18px}
+footer a:hover{color:#fff}
+footer .links{display:flex;flex-wrap:wrap;gap:10px 22px;font-weight:700}
+footer .base{margin-top:14px;line-height:2}
+footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);font-size:11px;letter-spacing:.06em}
+@media(max-width:760px){footer .ft{grid-template-columns:1fr}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero img{animation:none}.marquee ul{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <a href="#top" class="brand">
+    <img class="mark" src="images/kms-mark.png" alt="ケー・エム・エス株式会社">
+    <span class="sub">RECRUIT</span>
+  </a>
+  <nav class="gnav">
+    <a href="#about">私たちについて</a>
+    <a href="#numbers">数字で見るKMS</a>
+    <a href="#people">社員の素顔</a>
+    <a href="#interview">社員インタビュー</a>
+    <a href="#culture">働く環境</a>
+    <a href="#jobs">募集要項</a>
+    <a href="#faq">FAQ</a>
+    <a href="#entry" class="btn-entry">ENTRY</a>
+  </nav>
+  <button class="navtoggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <img src="images/hero.jpg" alt="全員でガッツポーズをするケー・エム・エスの社員たち" fetchpriority="high">
+  <div class="inner">
+    <span class="label en">FAMILY-LIKE BONDS</span>
+    <h1>仕事も遊びも、<br><em>フルスロットル。</em></h1>
+    <p>楽しいことも辛いことも共有する家族のような会社。<br>この絆こそが、高い技術力を生みだす最高の強みです。</p>
+  </div>
+  <div class="scroll en">SCROLL<span></span></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <ul>
+    <li>FULL THROTTLE</li><li>MOLD BASE</li><li>志 ・ 和 ・ 力</li><li>SINCE 2002</li><li>GR86／BRZ RACE</li><li>SAITAMA</li>
+    <li>FULL THROTTLE</li><li>MOLD BASE</li><li>志 ・ 和 ・ 力</li><li>SINCE 2002</li><li>GR86／BRZ RACE</li><li>SAITAMA</li>
+  </ul>
+</div>
+
+<!-- 求む -->
+<section class="wanted">
+  <div class="k"><small>WE ARE LOOKING FOR</small>求む、<br>本気で楽しめる人。</div>
+  <p class="lead">
+    専門知識も、学部学科も、いりません。<br>
+    必要なのは、仲間と本気で笑って、本気で悔しがれること。<br>
+    KMSは、技術の会社である前に「人」の会社です。
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="en-sub">ABOUT US</div>
+      <span class="num">01 ／ 理念・事業内容</span>
+      <h2>私たちについて</h2>
+    </div>
+
+    <div class="about-grid rv">
+      <div>
+        <h3>モノづくり<mark>≠</mark>匠の技⁉</h3>
+        <p>製造業界におけるモノづくりのイメージといえば、「匠の技」。それがこれまでの常識だったのかもしれません。しかし職人技に頼ることは、職人の都合を時としてお客様に押し付けることになります。</p>
+        <p>だからこそ当社では、お客様を第一に考え、職人の技を分解し仕組みとシステムによって再構成。<strong>全くの素人でも、2週間もあればベテランの職人と同水準の仕事ができる環境</strong>を整えました。</p>
+        <p>常識に囚われないのが当社のスタイル。例えば営業事務では効率化のために「お菓子タイム」を導入。営業も既存のお客様が中心ということもあり「雑談営業」が中心で、ほとんど仕事の話をしない商談も少なくありません。</p>
+      </div>
+      <div class="figstack">
+        <img src="images/factory-kmp.jpg" alt="KMSの工場外観" loading="lazy">
+        <div class="duo">
+          <img src="images/factory1.jpg" alt="岩槻工場" loading="lazy">
+          <img src="images/factory3.jpg" alt="岩槻第三工場" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="about-grid rev rv">
+      <div>
+        <h3>ものづくり日本の元気を、<br>取り戻す。</h3>
+        <p>例えば、あなたが使っているスマートフォンのケースや自動車のパーツなど、様々なモノに利用される「<strong>モールドベース</strong>」というプラスチック製品の金型の土台を製造しています。</p>
+        <p>モールドベースの製作において受注〜納品までを一貫して手掛けている当社。その強みを活かし、業界のリーディングカンパニーとしてトップクラスのシェアを誇っています。</p>
+        <p>また「ものづくり日本の元気を取り戻すため」「金型業界と密接に関わる車への恩返しとして」モータースポーツ「GR86／BRZレース」へ積極的に参戦。地域貢献の一環として浦和レッズ「Reds Business Club」の会員としても活動しています。</p>
+      </div>
+      <div class="figstack">
+        <img src="images/product.jpg" alt="モールドベースと金型部品" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="sec dark" id="numbers">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="en-sub">NUMBERS</div>
+      <span class="num">02 ／ データで見る</span>
+      <h2>数字で見るKMS</h2>
+    </div>
+    <dl class="nums rv">
+      <div><dt>設立</dt><dd>2002<i>年11月</i></dd><span class="note">2005年に株式会社化</span></div>
+      <div><dt>従業員数</dt><dd>74<i>名</i></dd><span class="note">2023年4月時点</span></div>
+      <div><dt>拠点数</dt><dd>4<i>拠点</i></dd><span class="note">本社・営業所＋岩槻第一〜第三工場</span></div>
+      <div><dt>資本金</dt><dd>3,000<i>万円</i></dd><span class="note">2005年 株式会社化</span></div>
+      <div><dt>未経験からの立ち上がり</dt><dd>2<i>週間</i></dd><span class="note">仕組みとシステムでベテランと同水準へ</span></div>
+      <div><dt>県外への転勤</dt><dd>0<i>回</i></dd><span class="note">勤務地はすべて埼玉県さいたま市</span></div>
+      <div><dt>モータースポーツ参戦</dt><dd>2013<i>年〜</i></dd><span class="note">TOYOTA GAZOO Racing GR86／BRZ Cup</span></div>
+      <div><dt>モールドベースのシェア</dt><dd class="sm">業界トップクラス</dd><span class="note">受注から納品までの一貫体制が強み</span></div>
+    </dl>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<section class="sec" id="people">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="en-sub">PEOPLE</div>
+      <span class="num">03 ／ KMSの素顔</span>
+      <h2>この会社は、<br>この顔ぶれでできている。</h2>
+      <p>表彰式も、バーベキューも、社員旅行も、レース観戦も。全力で働いて、全力で遊ぶ。写真がいちばん、KMSを語ってくれます。</p>
+    </div>
+    <div class="gal rv">
+      <figure class="g-a"><img src="images/yakatabune.jpg" alt="屋形船での納会に集まった社員たち" loading="lazy"><figcaption>年に一度の納会</figcaption></figure>
+      <figure class="g-b"><img src="images/stage.jpg" alt="社内イベントで盛り上がる社員たち" loading="lazy"><figcaption>全社イベント</figcaption></figure>
+      <figure class="g-c"><img src="images/trip.jpg" alt="社員旅行での記念撮影" loading="lazy"><figcaption>社員旅行</figcaption></figure>
+      <figure class="g-d"><img src="images/bbq1.jpg" alt="バーベキューで乾杯する社員" loading="lazy"><figcaption>夏のBBQ</figcaption></figure>
+      <figure class="g-e"><img src="images/bbq2.jpg" alt="バーベキュー会場の社員たち" loading="lazy"><figcaption>夏のBBQ</figcaption></figure>
+      <figure class="g-f"><img src="images/onsen.jpg" alt="社員旅行の宿でくつろぐ社員" loading="lazy"><figcaption>社員旅行</figcaption></figure>
+      <figure class="g-g"><img src="images/entrance.jpg" alt="内定式に集まったメンバー" loading="lazy"><figcaption>内定式</figcaption></figure>
+      <figure class="g-h"><img src="images/dinner.jpg" alt="食事会を楽しむ社員" loading="lazy"><figcaption>歓迎会</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- INTERVIEW -->
+<section class="sec" id="interview" style="background:var(--gray)">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="en-sub">INTERVIEW</div>
+      <span class="num">04 ／ 働く人の声</span>
+      <h2>社員インタビュー</h2>
+      <p>KMSには4つの職種があります。それぞれの現場で、どんな人が、どんな一日を過ごしているのか。実際に働くメンバーに聞きました。</p>
+    </div>
+    <p class="itv-note rv"><b>※ この4名分は構成見本（ダミー原稿）です。</b>実際の社員のお名前・お写真・回答をいただければ、そのまま差し替えて公開できる状態にしてあります。写真は縦3:4での撮影がおすすめです。</p>
+    <div class="itv rv">
+
+      <article data-itv="1">
+        <div class="ph"><span class="no en">01</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
+        <div class="body">
+          <span class="role">営業</span>
+          <h3>「雑談」から、次の仕事が生まれる。</h3>
+          <p class="lead">売り込まない営業。お客様の困りごとを、雑談のなかから拾い上げる仕事です。</p>
+          <div class="who">◯◯部／20XX年入社／文系学部出身</div>
+          <span class="more en">READ MORE →</span>
+        </div>
+      </article>
+
+      <article data-itv="2">
+        <div class="ph"><span class="no en">02</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
+        <div class="body">
+          <span class="role">営業事務</span>
+          <h3>効率化のために、お菓子を食べる。</h3>
+          <p class="lead">受注から納品までを支える司令塔。常識にとらわれない働き方がここにあります。</p>
+          <div class="who">◯◯部／20XX年入社／未経験入社</div>
+          <span class="more en">READ MORE →</span>
+        </div>
+      </article>
+
+      <article data-itv="3">
+        <div class="ph"><span class="no en">03</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
+        <div class="body">
+          <span class="role">機械系CAD／CAMオペレーター</span>
+          <h3>図面が、目の前で鉄になる。</h3>
+          <p class="lead">CADで描いたデータが、そのまま製品になる瞬間。ものづくりの醍醐味です。</p>
+          <div class="who">◯◯部／20XX年入社／専門知識なしで入社</div>
+          <span class="more en">READ MORE →</span>
+        </div>
+      </article>
+
+      <article data-itv="4">
+        <div class="ph"><span class="no en">04</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
+        <div class="body">
+          <span class="role">マシンオペレーター</span>
+          <h3>2週間で、一人前になれた理由。</h3>
+          <p class="lead">職人技を仕組みに分解しているから、未経験でも最短距離で戦力になれます。</p>
+          <div class="who">◯◯部／20XX年入社／異業種から転職</div>
+          <span class="more en">READ MORE →</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE -->
+<section id="culture">
+  <div class="cul-hero">
+    <img src="images/racing.jpg" alt="GR86／BRZレースに参戦するKMSのマシンと応援する社員" loading="lazy">
+    <div class="t wrap" style="max-width:none">
+      <h3>仕事も遊びも全力で楽しむ！</h3>
+      <p>TOYOTA GAZOO Racing GR86／BRZレースへの年間参戦、Jリーグ浦和レッズとのスポンサー契約。富士スピードウェイや埼玉スタジアムへ、みんなで応援に行きます。</p>
+    </div>
+  </div>
+  <div class="sec wrap" style="padding-top:clamp(48px,7vw,90px)">
+    <div class="head rv">
+      <div class="en-sub">CULTURE</div>
+      <span class="num">05 ／ 働く環境</span>
+      <h2>働きやすさは、<br>会社の成長戦略です。</h2>
+    </div>
+    <div class="cul rv">
+      <article>
+        <img src="images/racing-crowd.jpg" alt="レース会場で応援するKMSの社員" loading="lazy">
+        <div class="ttl"><b>01</b>モータースポーツ参戦</div>
+        <p>「金型業界と密接に関わる車への恩返し」としてGR86／BRZレースに参戦。社員も応援団としてサーキットへ。応援グッズやオリジナルTシャツも毎年つくっています。</p>
+      </article>
+      <article>
+        <img src="images/tshirt.jpg" alt="KMS RACING PROJECTのオリジナルTシャツ" loading="lazy">
+        <div class="ttl"><b>02</b>浦和レッズ Reds Business Club</div>
+        <p>地域貢献の一環としてJリーグ浦和レッズのビジネスクラブ会員に。埼玉スタジアムでの観戦も、社内イベントのひとつです。</p>
+      </article>
+      <article>
+        <img src="images/hq-night.jpg" alt="ケー・エム・エス本社ビル" loading="lazy">
+        <div class="ttl"><b>03</b>拠点はすべて埼玉、県外転勤なし</div>
+        <p>本社・営業所と3つの工場は、すべてさいたま市内。県外への転勤や異動はありません。住む場所を変えずに、腰を据えてキャリアを築けます。</p>
+      </article>
+    </div>
+    <div class="cul-list rv">
+      <article>
+        <div class="ttl"><b>04</b>社内イベントが多い</div>
+        <p>バーベキュー、社員旅行、納会、表彰式。部署や年次を越えて集まる機会が多く、「家族のような会社」と言われる所以です。</p>
+      </article>
+      <article>
+        <div class="ttl"><b>05</b>研修制度</div>
+        <p>業界や専門的な知識を学ぶ座学研修、実務を通じてノウハウを学ぶ実務研修、社外研修など、個々の成長やTPOに合わせて実施。配属後も上司・先輩がしっかりサポートします。</p>
+      </article>
+      <article>
+        <div class="ttl"><b>06</b>働き方改革・福利厚生</div>
+        <p>育休をはじめとした制度の整備、福利厚生の強化にも全力で取り組んでいます。長く働ける環境を、会社として本気でつくっています。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section class="sec dark">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="en-sub">MESSAGE</div>
+      <span class="num">06 ／ 代表メッセージ</span>
+      <h2>従業員を大切にすることが、<br>最良の成長戦略。</h2>
+    </div>
+    <div class="msg rv">
+      <img src="images/award.jpg" alt="社内表彰式で社員とともに喜ぶ代表取締役 北見雄一" loading="lazy">
+      <div>
+        <p>2002年に設立し21年目に突入した当社。途中、リーマンショックや2020年〜の新型コロナウイルスによる世界的な不況に見舞われましたが、2012年の第2工場竣工、2014年の本社ビル竣工、2022年3月の第三工場竣工など、順調に成長を続けています。</p>
+        <p>その成長を支えてきたのは、国内屈指の技術力。そしてその技術を実現するのは人です。だからこそ、当社では創業当初から従業員を大切にする経営を続けてきました。労働環境を整える、人材教育にシッカリ投資する。また早くから大きな裁量を任せ、成長を促していくことも当社の方針です。</p>
+        <p>会社の歯車ではなく、1人の人間として、向き合っていく。その姿勢こそが、高い技術力を実現し成長を牽引してきたのです。これからも大切な仲間たちと成長を目指していきます。</p>
+        <div class="sign">代表取締役<b>北見 雄一</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOBS -->
+<section class="sec" id="jobs">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="en-sub">JOBS</div>
+      <span class="num">07 ／ 募集職種・募集要項</span>
+      <h2>募集要項</h2>
+      <p>学部学科や専門知識は一切問いません。入社後のジョブチェンジ、選考途中での希望職種の変更も可能です。</p>
+    </div>
+    <div class="jobs rv">
+      <article>
+        <span class="no en">JOB 01</span>
+        <h3>営業／法人向け</h3>
+        <p>既存のお客様が中心。売り込む営業ではなく、雑談のなかからお客様の困りごとを見つけ、社内をつないで解決する仕事です。</p>
+        <span class="place">本社・営業所（さいたま市桜区）</span>
+      </article>
+      <article>
+        <span class="no en">JOB 02</span>
+        <h3>営業事務</h3>
+        <p>受注から納品までの流れを支える司令塔。効率化のために「お菓子タイム」を導入するなど、常識にとらわれない働き方をしています。</p>
+        <span class="place">本社・営業所（さいたま市桜区）</span>
+      </article>
+      <article>
+        <span class="no en">JOB 03</span>
+        <h3>機械系CAD／CAMオペレーター</h3>
+        <p>お客様の要望をもとに、モールドベースの加工データを作成。描いたデータがそのまま製品になる、ものづくりの中核です。</p>
+        <span class="place">岩槻第一工場（さいたま市岩槻区）</span>
+      </article>
+      <article>
+        <span class="no en">JOB 04</span>
+        <h3>マシンオペレーター</h3>
+        <p>最先端の工作機械を操作し、モールドベースを削り出す仕事。職人技を仕組みに分解しているため、未経験からでも短期間で戦力になれます。</p>
+        <span class="place">岩槻第一〜第三工場（さいたま市岩槻区）</span>
+      </article>
+    </div>
+
+    <table class="spec rv">
+      <tr><th>事業内容</th><td>金型材料の販売および加工業（入子、6F6G、水穴、金型、部品加工）／モールドベースの受注〜製作〜納品までの一貫生産</td></tr>
+      <tr><th>募集職種</th><td>営業（法人向け）／営業事務／機械系CAD・CAMオペレーター／マシンオペレーター<br>※学部学科・専門知識は不問</td></tr>
+      <tr><th>勤務地</th><td>営業・営業事務・CAD／CAMオペレーター：本社（埼玉県さいたま市桜区中島2-22-14）<br>機械系CAD／CAMオペレーター：岩槻第一工場（さいたま市岩槻区上野3-9-1）<br>マシンオペレーター：岩槻第一・第二・第三工場（さいたま市岩槻区）<br>※県外への転勤・異動はありません</td></tr>
+      <tr><th>研修制度</th><td>制度あり（社内研修／社外研修／実務研修 ほか）<br>配属後も上司・先輩がサポートします</td></tr>
+      <tr><th>選考で重視する点</th><td>「人物」を最も重視しています。選考基準は会社説明会でお話しします</td></tr>
+      <tr><th>内々定までの期間</th><td>1カ月半程度（会社説明会参加から1〜3カ月程度）</td></tr>
+      <tr><th>給与・待遇・休日</th><td>詳細は会社説明会・募集要項にてご案内します</td></tr>
+    </table>
+
+    <div class="head rv" style="margin-top:clamp(56px,8vw,100px);margin-bottom:26px">
+      <h2 style="font-size:clamp(20px,3vw,30px)">選考の流れ</h2>
+    </div>
+    <ul class="flow rv">
+      <li>エントリー</li>
+      <li>会社説明会（WEB）</li>
+      <li>エントリーシート提出</li>
+      <li>一次選考</li>
+      <li>適性検査</li>
+      <li>二次選考</li>
+      <li>最終選考</li>
+      <li>内々定</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="background:var(--gray)">
+  <div class="wrap" style="max-width:900px">
+    <div class="head rv">
+      <div class="en-sub">FAQ</div>
+      <span class="num">08 ／ よくあるご質問</span>
+      <h2>採用に関するご質問</h2>
+    </div>
+    <div class="faq rv">
+      <details open>
+        <summary>募集している職種はなんですか？<span class="v"></span></summary>
+        <div class="a">・営業／法人向け
+・営業事務
+・機械系CAD／CAMオペレーター
+・マシンオペレーター
+
+自動車、次世代自動車各部品など金型の土台となる「モールドベース」の製作・受注・販売・納品までを各セクションごとに行います。
+※学部学科や専門知識は一切問いません！
+※入社後のジョブチェンジ、選考途中の場合でも希望職種の変更も可能です。</div>
+      </details>
+      <details>
+        <summary>勤務地はどこですか？<span class="v"></span></summary>
+        <div class="a">営業・営業事務・CAD／CAMオペレーター：本社（埼玉県さいたま市桜区）
+機械系CAD／CAMオペレーター：第一工場（埼玉県さいたま市岩槻区）
+マシンオペレーター：第一工場、第二工場、第三工場（埼玉県さいたま市岩槻区）
+※県外へ転勤や移動はありません。</div>
+      </details>
+      <details>
+        <summary>選考フローはどのようになっていますか？<span class="v"></span></summary>
+        <div class="a">【選考の流れ】
+エントリー → 会社説明会（WEB）→ エントリーシート提出 → 一次選考 → 適性検査 → 二次選考 → 最終選考 → 内々定
+
+選考では「人物」を最も重視しています。選考基準は説明会でお話しさせて頂きます。是非、ご参加ください。
+
+【内々定までの所要日数】
+1カ月半程度（会社説明会参加から1カ月〜3カ月程度）</div>
+      </details>
+      <details>
+        <summary>入社後の研修制度はありますか？<span class="v"></span></summary>
+        <div class="a">制度あり（社内研修／社外研修／実務研修 ほか）
+
+業界や専門的な知識をじっくりと学べる座学形式の研修から、実際の業務を通じて業務のポイントやノウハウを学べる実務研修ほか、個々の成長やTPOに合わせた研修を行っています。
+
+各事業部に配属されてからも、上司や先輩がしっかりとサポートしていくので安心して業務に臨むことができます。わからないことがあれば1人で悩まず、気軽に相談してください！</div>
+      </details>
+      <details>
+        <summary>未経験・文系でも大丈夫ですか？<span class="v"></span></summary>
+        <div class="a">まったく問題ありません。
+
+当社は職人の技を分解し、仕組みとシステムによって再構成しています。そのため、専門知識のない方でも2週間ほどでベテランと同水準の仕事ができる環境が整っています。実際に、文系出身・異業種からの入社者も多数活躍しています。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ENTRY -->
+<section class="entry" id="entry">
+  <img src="images/entrance.jpg" alt="" aria-hidden="true" loading="lazy">
+  <div class="in">
+    <div class="en-sub">ENTRY</div>
+    <h2>モノづくり日本一への挑戦。<br>その一員になりませんか。</h2>
+    <p>「金型加工」業界においてTOPクラスのシェアを持つケー・エム・エス。今後は、業界とモノづくりの更なる発展や地域に密着した企業をめざして、世の中に貢献できる「人づくり」に注力していきます。</p>
+    <a href="https://e-kms.co.jp/contact/" class="btn-entry" target="_blank" rel="noopener">エントリーはこちら</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="brand"><img class="mark" src="images/kms-mark.png" alt="ケー・エム・エス株式会社" style="height:34px"> <span class="sub">ケー・エム・エス株式会社</span></div>
+        <div class="base">
+          設立：2002年11月22日／資本金：3,000万円／従業員数：74名（2023年4月）<br>
+          代表取締役：北見 雄一<br>
+          本社・営業所：埼玉県さいたま市桜区中島2-22-14<br>
+          岩槻第一工場：さいたま市岩槻区上野3-9-1<br>
+          岩槻第二工場：さいたま市岩槻区大字掛字下566-1<br>
+          岩槻第三工場：さいたま市岩槻区上野4-5-1
+        </div>
+      </div>
+      <div>
+        <div class="links">
+          <a href="#about">私たちについて</a>
+          <a href="#numbers">数字で見るKMS</a>
+          <a href="#people">社員の素顔</a>
+          <a href="#interview">社員インタビュー</a>
+          <a href="#culture">働く環境</a>
+          <a href="#jobs">募集要項</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="links" style="margin-top:24px">
+          <a href="https://e-kms.co.jp/" target="_blank" rel="noopener">コーポレートサイト ↗</a>
+          <a href="https://e-kms.co.jp/motorsports/" target="_blank" rel="noopener">モータースポーツ参戦記 ↗</a>
+          <a href="https://e-kms.co.jp/contact/" target="_blank" rel="noopener">お問い合わせ ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© KMS CO.,LTD. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="bg" data-close></div>
+  <div class="card">
+    <button class="close" data-close aria-label="閉じる">×</button>
+    <div id="m-body"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd');
+  var onScroll=function(){ hd.classList.toggle('solid', window.scrollY>window.innerHeight*0.7); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  document.querySelector('.navtoggle').addEventListener('click',function(){
+    document.body.classList.toggle('navopen');
+  });
+  document.querySelectorAll('nav.gnav a').forEach(function(a){
+    a.addEventListener('click',function(){ document.body.classList.remove('navopen'); });
+  });
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  /* ---- 社員インタビュー（ダミー原稿：取材後に差し替え） ---- */
+  var ITV={
+   1:{role:'営業',title:'「雑談」から、次の仕事が生まれる。',who:'◯◯部／20XX年入社／文系学部出身',
+      qa:[['KMSに入社した理由を教えてください。','（ここに回答が入ります）面接というより雑談のような時間で、飾らない人たちだなと感じたのが決め手でした。製造業の知識はまったくありませんでしたが、「知識はあとから付く」と言ってもらえて安心しました。'],
+          ['仕事のやりがいは？','（ここに回答が入ります）当社の営業は既存のお客様が中心なので、売り込む場面はほとんどありません。雑談のなかで出てきた「実はこれ困ってるんだよね」を拾って、社内の技術メンバーにつなぐ。それが形になったときがいちばん嬉しい瞬間です。'],
+          ['職場の雰囲気は？','（ここに回答が入ります）部署の垣根がとにかく低いです。工場のメンバーとも普段から話しているので、無理なお願いも「まあやってみるか」と受けてもらえる。この距離感が当社の強みだと思います。'],
+          ['どんな人と働きたいですか？','（ここに回答が入ります）人と話すのが好きな人。専門知識より、そこがいちばん大事だと思っています。']]},
+   2:{role:'営業事務',title:'効率化のために、お菓子を食べる。',who:'◯◯部／20XX年入社／未経験入社',
+      qa:[['どんな仕事をしていますか？','（ここに回答が入ります）受注のデータ入力から、納期の調整、工場との連携まで。営業と製造のあいだに立って、全体の流れが止まらないようにするのが役割です。'],
+          ['「お菓子タイム」について教えてください。','（ここに回答が入ります）集中が切れる時間帯に、あえてみんなで手を止めてお菓子を食べます。会話が生まれて、そのなかで「あの案件どうなってる？」という確認まで終わってしまう。結果的に効率が上がっているんです。'],
+          ['未経験でも大丈夫でしたか？','（ここに回答が入ります）まったく問題なかったです。手順がきちんと整理されているので、覚えることは多くても迷うことはありませんでした。'],
+          ['働きやすさは？','（ここに回答が入ります）県外転勤がないので、生活の予定が立てやすいです。育休の制度も整ってきていて、長く働くイメージが持てます。']]},
+   3:{role:'機械系CAD／CAMオペレーター',title:'図面が、目の前で鉄になる。',who:'◯◯部／20XX年入社／専門知識なしで入社',
+      qa:[['仕事内容を教えてください。','（ここに回答が入ります）お客様からいただいた仕様をもとに、モールドベースの加工データをCAD／CAMで作成します。そのデータが工作機械に渡り、実際の製品になります。'],
+          ['入社前の知識は必要ですか？','（ここに回答が入ります）私はCADを触ったこともありませんでした。当社は職人の技を仕組みに分解しているので、順番どおりに覚えていけば必ずできるようになります。'],
+          ['やりがいを感じる瞬間は？','（ここに回答が入ります）自分が描いたデータが、目の前で鉄の塊から削り出されていく瞬間です。スマートフォンのケースや車の部品の「土台」を自分がつくっていると思うと、単純に誇らしい。'],
+          ['これからの目標は？','（ここに回答が入ります）もっと難しい形状に挑戦して、若いメンバーに教えられる立場になることです。']]},
+   4:{role:'マシンオペレーター',title:'2週間で、一人前になれた理由。',who:'◯◯部／20XX年入社／異業種から転職',
+      qa:[['転職のきっかけは？','（ここに回答が入ります）まったくの異業種からの転職でした。ものづくりに関わってみたかったのと、面接で会った人たちの雰囲気が良かったのが理由です。'],
+          ['本当に2週間で仕事ができるようになりますか？','（ここに回答が入ります）「なんとなく」で覚える部分がないんです。手順も判断基準もすべて言語化されているので、迷わない。もちろんその先の奥深さはありますが、戦力として立てるまでは本当に早いです。'],
+          ['職場の雰囲気は？','（ここに回答が入ります）体育会系というより、家族に近いです。バーベキューも社員旅行も、みんな本気で楽しんでいます。レース観戦に行くのも毎年の楽しみです。'],
+          ['どんな人に来てほしいですか？','（ここに回答が入ります）経験は本当にいりません。仲間と一緒に、全力で楽しめる人に来てほしいです。']]}
+  };
+  var modal=document.getElementById('modal'), mb=document.getElementById('m-body');
+  document.querySelectorAll('.itv article').forEach(function(el){
+    el.addEventListener('click',function(){
+      var d=ITV[el.dataset.itv]; if(!d) return;
+      mb.innerHTML='<span class="role">'+d.role+'</span><h3>'+d.title+'</h3><div class="who">'+d.who+'</div>'+
+        d.qa.map(function(x){return '<div class="qa"><div class="q">'+x[0]+'</div><div class="a">'+x[1]+'</div></div>';}).join('');
+      modal.classList.add('on'); document.body.style.overflow='hidden';
+    });
+  });
+  function closeM(){ modal.classList.remove('on'); document.body.style.overflow=''; }
+  modal.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click',closeM); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
+})();
+</script>
+</body>
+</html>
