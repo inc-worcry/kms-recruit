@@ -1,5 +1,8 @@
 # ケー・エム・エス株式会社 採用サイト（シングルページ）
 
+公開URL: https://inc-worcry.github.io/kms-recruit/
+GitHub: https://github.com/inc-worcry/kms-recruit
+
 ## ファイル
 - `index.html` … サイト本体（HTML/CSS/JS すべて内包・外部依存はGoogle Fontsのみ）
 - `images/` … 使用画像（Web用に圧縮済み）
