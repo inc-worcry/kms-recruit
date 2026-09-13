@@ -177,29 +177,23 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
   .g-g,.g-h{grid-column:span 3;grid-row:span 1}
 }
 
-/* ---------- leaders ---------- */
-.motto{border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);padding:clamp(34px,5vw,64px) 0;margin-bottom:clamp(34px,5vw,56px)}
-.motto-lbl{display:block;font-size:clamp(13px,1.4vw,15px);font-weight:900;letter-spacing:.2em;color:rgba(255,255,255,.7);margin-bottom:clamp(10px,1.6vw,18px)}
-.motto-word{font-size:clamp(38px,10.5vw,128px);font-weight:900;line-height:1.1;letter-spacing:.02em;color:var(--green);white-space:nowrap}
-.motto-en{display:block;margin-top:clamp(12px,1.6vw,20px);font-size:clamp(12px,1.3vw,15px);letter-spacing:.34em;color:rgba(255,255,255,.4)}
-.motto-body{max-width:44em}
-.motto-body p{font-size:clamp(15px,1.6vw,17px);line-height:2.1;color:rgba(255,255,255,.82)}
-.motto-body p + p{margin-top:18px}
-.motto-body .last{color:#fff;font-weight:700}
-
-/* ---------- interview (coming soon) ---------- */
-.itv{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px)}
-.itv article{background:#fff;border:1px solid var(--gray-2);display:flex;flex-direction:column}
-.itv .ph{
-  aspect-ratio:3/4;position:relative;overflow:hidden;
-  background:repeating-linear-gradient(135deg,#E9EBEC 0 12px,#E3E6E7 12px 24px);
-  display:flex;align-items:center;justify-content:center;
-}
-.itv .ph .no{position:absolute;top:14px;left:16px;font-family:Anton;font-size:44px;color:rgba(14,15,17,.14);line-height:1}
-.itv .ph .soon{font-family:Anton;font-size:clamp(20px,2.2vw,28px);letter-spacing:.12em;color:rgba(14,15,17,.42);line-height:1}
-.itv .body{padding:16px 18px 18px}
-.itv .role{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.08em;color:#fff;background:var(--ink);padding:5px 10px}
-@media(max-width:980px){.itv{grid-template-columns:repeat(2,1fr)}}
+/* ---------- team (leaders + interview) ---------- */
+.team{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px);align-items:start}
+.motto-lbl{display:block;font-size:13px;font-weight:900;letter-spacing:.12em;color:var(--muted);margin-bottom:10px}
+.motto-word{font-size:clamp(32px,4.6vw,64px);font-weight:900;line-height:1.1;letter-spacing:.02em;color:var(--green);white-space:nowrap}
+.motto-en{display:block;margin-top:10px;font-size:12px;letter-spacing:.34em;color:rgba(14,15,17,.35)}
+.motto-body{margin-top:clamp(20px,2.6vw,30px);padding-top:clamp(20px,2.6vw,28px);border-top:1px solid var(--gray-2)}
+.motto-body p{font-size:15px;line-height:2;color:#3A3F45}
+.motto-body p + p{margin-top:14px}
+.motto-body .last{color:var(--ink);font-weight:700}
+.itv-ttl{font-size:15px;font-weight:900;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.itv-ttl::before{content:"";width:18px;height:2px;background:var(--green)}
+.itv{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.itv article{background:#fff;border:1px solid var(--gray-2);padding:16px 16px 14px;min-height:118px;position:relative}
+.itv .no{font-family:Anton;font-size:26px;color:rgba(14,15,17,.12);line-height:1;display:block}
+.itv .soon{font-family:Anton;font-size:11px;letter-spacing:.2em;color:var(--green);position:absolute;top:18px;right:16px}
+.itv .role{display:block;font-size:13px;font-weight:900;margin-top:14px;line-height:1.5}
+@media(max-width:860px){.team{grid-template-columns:1fr}.motto-word{font-size:clamp(32px,10vw,64px)}}
 
 /* ---------- culture ---------- */
 .cul-hero{position:relative;height:clamp(300px,52vw,540px);overflow:hidden}
@@ -299,7 +293,6 @@ br.sp{display:none}
   .head .en-sub{font-size:clamp(40px,13vw,64px);margin-bottom:6px}
   .wanted .lead{font-size:13.5px}
   .g-h{grid-column:span 6;grid-row:span 2}
-  .itv .role{letter-spacing:.02em}
   .spec,.spec tbody,.spec tr,.spec th,.spec td{display:block;width:auto}
   .spec tr{border-bottom:1px solid var(--gray-2);padding:14px 2px}
   .spec th,.spec td{border-bottom:0;padding:0}
@@ -318,8 +311,7 @@ br.sp{display:none}
     <a href="#about">私たちに<wbr>ついて</a>
     <a href="#numbers">数字で<wbr>見る<wbr>KMS</a>
     <a href="#people">社員の<wbr>素顔</a>
-    <a href="#leaders">リーダー</a>
-    <a href="#interview">社員インタビュー</a>
+    <a href="#team">働く<wbr>人たち</a>
     <a href="#culture">働く<wbr>環境</a>
     <a href="#jobs">募集要項</a>
     <a href="#faq">FAQ</a>
@@ -431,53 +423,33 @@ br.sp{display:none}
   </div>
 </section>
 
-<!-- LEADERS -->
-<section class="sec dark" id="leaders">
+<!-- TEAM: LEADERS + INTERVIEW -->
+<section class="sec" id="team" style="background:var(--gray)">
   <div class="wrap">
     <div class="head rv">
-      <div class="en-sub">LEADERS</div>
-      <span class="num">04 ／ リーダー陣</span>
-      <h2>KMSを<wbr>支える、<br>若手リーダー・マネージャー陣。</h2>
-      <p>どんな<wbr>リーダーで<wbr>ありたいか。<wbr>研修の<wbr>中で<wbr>リーダー陣が<wbr>話し合い、<wbr>ひとつの<wbr>合言葉に<wbr>たどり<wbr>着きました。</p>
+      <div class="en-sub">OUR TEAM</div>
+      <span class="num">04 ／ リーダー・社員インタビュー</span>
+      <h2>KMSを<wbr>支える<wbr>人たち</h2>
     </div>
-    <div class="motto rv">
-      <span class="motto-lbl">リーダーの<wbr>合言葉</span>
-      <p class="motto-word">エンパワーメント</p>
-      <span class="motto-en en">EMPOWERMENT</span>
-    </div>
-    <div class="motto-body rv">
-      <p>自ら<wbr>先頭に<wbr>立って<wbr>動きながら、<wbr>メンバーが<wbr>いつでも<wbr>気軽に<wbr>相談できる<wbr>存在である<wbr>こと。<wbr>上下や<wbr>部署の<wbr>垣根を<wbr>越えて<wbr>信頼を<wbr>つなぎ、<wbr>営業・CAD・製造が<wbr>ひとつの<wbr>チームと<wbr>して<wbr>力を<wbr>発揮できる<wbr>状態を<wbr>つくる<wbr>こと。</p>
-      <p class="last">一人<wbr>ひとりの<wbr>力を<wbr>引き出し、<wbr>任せ、<wbr>支える。<br>それが、<wbr>KMSの<wbr>リーダーが<wbr>大切に<wbr>する<wbr>「エンパワーメント」です。</p>
-    </div>
-  </div>
-</section>
-
-<!-- INTERVIEW -->
-<section class="sec" id="interview" style="background:var(--gray)">
-  <div class="wrap">
-    <div class="head rv">
-      <div class="en-sub">INTERVIEW</div>
-      <span class="num">05 ／ 働く<wbr>人の<wbr>声</span>
-      <h2>社員インタビュー</h2>
-      <p>KMSには<wbr>4つの<wbr>職種が<wbr>あります。<wbr>それぞれの<wbr>現場で<wbr>働く<wbr>メンバーへの<wbr>インタビューを、<wbr>現在準備中です。<wbr>公開まで<wbr>少々<wbr>お待ちください。</p>
-    </div>
-    <div class="itv rv">
-      <article>
-        <div class="ph"><span class="no en">01</span><span class="soon">COMING SOON</span></div>
-        <div class="body"><span class="role">営業</span></div>
-      </article>
-      <article>
-        <div class="ph"><span class="no en">02</span><span class="soon">COMING SOON</span></div>
-        <div class="body"><span class="role">営業事務</span></div>
-      </article>
-      <article>
-        <div class="ph"><span class="no en">03</span><span class="soon">COMING SOON</span></div>
-        <div class="body"><span class="role">機械系CAD／CAMオペレーター</span></div>
-      </article>
-      <article>
-        <div class="ph"><span class="no en">04</span><span class="soon">COMING SOON</span></div>
-        <div class="body"><span class="role">マシンオペレーター</span></div>
-      </article>
+    <div class="team rv">
+      <div>
+        <span class="motto-lbl">研修で<wbr>リーダー陣が<wbr>決めた合言葉</span>
+        <p class="motto-word">エンパワーメント</p>
+        <span class="motto-en en">EMPOWERMENT</span>
+        <div class="motto-body">
+          <p>自ら<wbr>先頭に<wbr>立って<wbr>動きながら、<wbr>メンバーが<wbr>いつでも<wbr>気軽に<wbr>相談できる<wbr>存在である<wbr>こと。<wbr>上下や<wbr>部署の<wbr>垣根を<wbr>越えて<wbr>信頼を<wbr>つなぎ、<wbr>営業・CAD・製造が<wbr>ひとつの<wbr>チームと<wbr>して<wbr>力を<wbr>発揮できる<wbr>状態を<wbr>つくる<wbr>こと。</p>
+          <p class="last">一人<wbr>ひとりの<wbr>力を<wbr>引き出し、<wbr>任せ、<wbr>支える。<br>それが、<wbr>KMSの<wbr>リーダーが<wbr>大切に<wbr>する<wbr>「エンパワーメント」です。</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="itv-ttl">社員インタビュー</h3>
+        <div class="itv">
+          <article><span class="no">01</span><span class="soon">COMING SOON</span><span class="role">営業</span></article>
+          <article><span class="no">02</span><span class="soon">COMING SOON</span><span class="role">営業事務</span></article>
+          <article><span class="no">03</span><span class="soon">COMING SOON</span><span class="role">機械系CAD／CAMオペレーター</span></article>
+          <article><span class="no">04</span><span class="soon">COMING SOON</span><span class="role">マシンオペレーター</span></article>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -494,7 +466,7 @@ br.sp{display:none}
   <div class="sec wrap" style="padding-top:clamp(48px,7vw,90px)">
     <div class="head rv">
       <div class="en-sub">CULTURE</div>
-      <span class="num">06 ／ 働く<wbr>環境</span>
+      <span class="num">05 ／ 働く<wbr>環境</span>
       <h2>働きやすさは、<br>会社の<wbr>成長戦略です。</h2>
     </div>
     <div class="cul rv">
@@ -536,7 +508,7 @@ br.sp{display:none}
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">MESSAGE</div>
-      <span class="num">07 ／ 代表メッセージ</span>
+      <span class="num">06 ／ 代表メッセージ</span>
       <h2>従業員を<wbr>大切に<wbr>する<wbr>ことが、<br>最良の<wbr>成長戦略。</h2>
     </div>
     <div class="msg rv">
@@ -556,7 +528,7 @@ br.sp{display:none}
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">JOBS</div>
-      <span class="num">08 ／ 募集職種・募集要項</span>
+      <span class="num">07 ／ 募集職種・募集要項</span>
       <h2>募集要項</h2>
       <p>学部<wbr>学科や<wbr>専門知識は<wbr>一切問いません。<wbr>入社後の<wbr>ジョブチェンジ、<wbr>選考途中での<wbr>希望職種の<wbr>変更も<wbr>可能です。</p>
     </div>
@@ -605,7 +577,7 @@ br.sp{display:none}
   <div class="wrap" style="max-width:900px">
     <div class="head rv">
       <div class="en-sub">FAQ</div>
-      <span class="num">09 ／ よく<wbr>ある<wbr>ご質問</span>
+      <span class="num">08 ／ よく<wbr>ある<wbr>ご質問</span>
       <h2>採用に<wbr>関する<wbr>ご質問</h2>
     </div>
     <div class="faq rv">
@@ -675,8 +647,7 @@ br.sp{display:none}
           <a href="#about">私たちに<wbr>ついて</a>
           <a href="#numbers">数字で<wbr>見る<wbr>KMS</a>
           <a href="#people">社員の<wbr>素顔</a>
-          <a href="#leaders">リーダー</a>
-          <a href="#interview">社員インタビュー</a>
+          <a href="#team">働く<wbr>人たち</a>
           <a href="#culture">働く<wbr>環境</a>
           <a href="#jobs">募集要項</a>
           <a href="#faq">FAQ</a>
