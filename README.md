@@ -23,3 +23,12 @@ GitHub: https://github.com/inc-worcry/kms-recruit
 ## 出典
 本文・FAQ・代表メッセージは現行採用サイト（recruit.e-kms.co.jp）およびコーポレートサイト
 （e-kms.co.jp）の記載を元にしています。数値はすべて公開情報に準拠、推測値は使用していません。
+
+## 改行（文節区切り）
+日本語が単語の途中で改行されないよう、本文には BudouX で `<wbr>` を入れ、CSS は `word-break:keep-all` にしている。
+**テキストを編集したら必ず再実行する**（何度実行してもOK）。
+
+    pip install budoux
+    python3 tools/linebreak.py
+
+スマホだけ改行したい箇所は `<br class="sp">` を使う。

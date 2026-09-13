@@ -275,6 +275,26 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   .hero img{animation:none}
   html{scroll-behavior:auto}
 }
+
+/* ---------- line breaks & mobile ---------- */
+p,h1,h2,h3,dt,dd,td,th,li,summary,figcaption,.a,.note,.role,.place,.base,.sign,.k{word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+h1,h2,h3,.k,summary{text-wrap:balance}
+p,.a,td,.note{text-wrap:pretty}
+.sec.wrap{padding-left:var(--pad);padding-right:var(--pad)}
+br.sp{display:none}
+@media(max-width:760px){
+  body{font-size:14.5px;line-height:1.85}
+  br.sp{display:inline}
+  .hero .scroll{display:none}
+  .head .en-sub{font-size:clamp(40px,13vw,64px);margin-bottom:6px}
+  .wanted .lead{font-size:13.5px}
+  .g-h{grid-column:span 6;grid-row:span 2}
+  .itv .role{letter-spacing:.02em}
+  .spec,.spec tbody,.spec tr,.spec th,.spec td{display:block;width:auto}
+  .spec tr{border-bottom:1px solid var(--gray-2);padding:14px 2px}
+  .spec th,.spec td{border-bottom:0;padding:0}
+  .spec th{font-size:12.5px;color:var(--green-d);margin-bottom:4px}
+}
 </style>
 </head>
 <body>
@@ -285,11 +305,11 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
     <span class="sub">RECRUIT</span>
   </a>
   <nav class="gnav">
-    <a href="#about">私たちについて</a>
-    <a href="#numbers">数字で見るKMS</a>
-    <a href="#people">社員の素顔</a>
+    <a href="#about">私たちに<wbr>ついて</a>
+    <a href="#numbers">数字で<wbr>見る<wbr>KMS</a>
+    <a href="#people">社員の<wbr>素顔</a>
     <a href="#interview">社員インタビュー</a>
-    <a href="#culture">働く環境</a>
+    <a href="#culture">働く<wbr>環境</a>
     <a href="#jobs">募集要項</a>
     <a href="#faq">FAQ</a>
     <a href="#entry" class="btn-entry">ENTRY</a>
@@ -302,19 +322,19 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   <img src="images/hero.jpg" alt="全員でガッツポーズをするケー・エム・エスの社員たち" fetchpriority="high">
   <div class="inner">
     <span class="label en">FAMILY-LIKE BONDS</span>
-    <h1>仕事も遊びも、<br><em>フルスロットル。</em></h1>
-    <p>楽しいことも辛いことも共有する家族のような会社。<br>この絆こそが、高い技術力を生みだす最高の強みです。</p>
+    <h1>仕事も<wbr>遊びも、<br><em>フルスロットル。</em></h1>
+    <p>楽しい<wbr>ことも<wbr>辛いことも<wbr>共有する<wbr>家族のような<wbr>会社。<br>この<wbr>絆こそが、<wbr>高い<wbr>技術力を<wbr>生みだす<wbr>最高の<wbr>強みです。</p>
   </div>
   <div class="scroll en">SCROLL<span></span></div>
 </section>
 
 <!-- 求む -->
 <section class="wanted">
-  <div class="k"><small>WE ARE LOOKING FOR</small>求む、<br>本気で楽しめる人。</div>
+  <div class="k"><small>WE ARE LOOKING FOR</small>求む、<br>本気で<wbr>楽しめる人。</div>
   <p class="lead">
-    専門知識も、学部学科も、いりません。<br>
-    必要なのは、仲間と本気で笑って、本気で悔しがれること。<br>
-    KMSは、技術の会社である前に「人」の会社です。
+    専門知識も、<wbr>学部<wbr>学科も、<wbr>いりません。<br>
+    必要なのは、<wbr>仲間と<wbr>本気で笑って、<br class="sp">本気で<wbr>悔しがれる<wbr>こと。<br>
+    KMSは、<wbr>技術の<wbr>会社である<wbr>前に<wbr>「人」の<wbr>会社です。
   </p>
 </section>
 
@@ -324,15 +344,15 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
     <div class="head rv">
       <div class="en-sub">ABOUT US</div>
       <span class="num">01 ／ 理念・事業内容</span>
-      <h2>私たちについて</h2>
+      <h2>私たちに<wbr>ついて</h2>
     </div>
 
     <div class="about-grid rv">
       <div>
-        <h3>モノづくり<mark>≠</mark>匠の技⁉</h3>
-        <p>製造業界におけるモノづくりのイメージといえば、「匠の技」。それがこれまでの常識だったのかもしれません。しかし職人技に頼ることは、職人の都合を時としてお客様に押し付けることになります。</p>
-        <p>だからこそ当社では、お客様を第一に考え、職人の技を分解し仕組みとシステムによって再構成。<strong>全くの素人でも、2週間もあればベテランの職人と同水準の仕事ができる環境</strong>を整えました。</p>
-        <p>常識に囚われないのが当社のスタイル。例えば営業は既存のお客様が中心ということもあり「雑談営業」が中心で、ほとんど仕事の話をしない商談も少なくありません。</p>
+        <h3>モノづくり<mark>≠</mark>匠の<wbr>技⁉</h3>
+        <p>製造業界に<wbr>おける<wbr>モノづくりの<wbr>イメージと<wbr>いえば、<wbr>「匠の<wbr>技」。<wbr>それが<wbr>これまでの<wbr>常識だったのかもしれません。<wbr>しかし<wbr>職人技に<wbr>頼る<wbr>ことは、<wbr>職人の<wbr>都合を<wbr>時と<wbr>してお客様に<wbr>押し付ける<wbr>ことになります。</p>
+        <p>だから<wbr>こそ<wbr>当社では、<wbr>お客様を<wbr>第一に<wbr>考え、<wbr>職人の<wbr>技を<wbr>分解し仕組みと<wbr>システムに<wbr>よって<wbr>再構成。<strong>全くの<wbr>素人でも、<wbr>2週間も<wbr>あれば<wbr>ベテランの<wbr>職人と<wbr>同水準の<wbr>仕事が<wbr>できる<wbr>環境</strong>を<wbr>整えました。</p>
+        <p>常識に<wbr>囚われないのが<wbr>当社の<wbr>スタイル。<wbr>例えば<wbr>営業は<wbr>既存の<wbr>お客様が<wbr>中心と<wbr>いう<wbr>ことも<wbr>あり<wbr>「雑談営業」が<wbr>中心で、<wbr>ほとんど<wbr>仕事の<wbr>話を<wbr>しない<wbr>商談も<wbr>少なく<wbr>ありません。</p>
       </div>
       <div class="figstack">
         <img src="images/factory-kmp.jpg" alt="KMSの工場外観" loading="lazy">
@@ -345,10 +365,10 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
 
     <div class="about-grid rev rv">
       <div>
-        <h3>ものづくり日本の元気を、<br>取り戻す。</h3>
-        <p>例えば、あなたが使っているスマートフォンのケースや自動車のパーツなど、様々なモノに利用される「<strong>モールドベース</strong>」というプラスチック製品の金型の土台を製造しています。</p>
-        <p>モールドベースの製作において受注〜納品までを一貫して手掛けている当社。その強みを活かし、業界のリーディングカンパニーとしてトップクラスのシェアを誇っています。</p>
-        <p>また「ものづくり日本の元気を取り戻すため」「金型業界と密接に関わる車への恩返しとして」モータースポーツ「GR86／BRZレース」へ積極的に参戦。地域貢献の一環として浦和レッズ「Reds Business Club」の会員としても活動しています。</p>
+        <h3>もの<wbr>づくり日本の<wbr>元気を、<br>取り戻す。</h3>
+        <p>例えば、<wbr>あなたが<wbr>使っている<wbr>スマートフォンの<wbr>ケースや<wbr>自動車の<wbr>パーツなど、<wbr>様々な<wbr>モノに<wbr>利用される<wbr>「<strong>モールドベース</strong>」と<wbr>いう<wbr>プラスチック製品の<wbr>金型の<wbr>土台を<wbr>製造しています。</p>
+        <p>モールドベースの<wbr>製作に<wbr>おいて<wbr>受注〜納品までを<wbr>一貫して<wbr>手掛けている<wbr>当社。<wbr>その<wbr>強みを<wbr>活かし、<wbr>業界の<wbr>リーディングカンパニーと<wbr>して<wbr>トップクラスの<wbr>シェアを<wbr>誇っています。</p>
+        <p>また<wbr>「もの<wbr>づくり日本の<wbr>元気を<wbr>取り戻すため」<wbr>「金型業界と<wbr>密接に<wbr>関わる<wbr>車への<wbr>恩返しと<wbr>して」モータースポーツ<wbr>「GR86／BRZレース」<wbr>へ<wbr>積極的に<wbr>参戦。<wbr>地域貢献の<wbr>一環と<wbr>して<wbr>浦和レッズ<wbr>「Reds Business Club」の<wbr>会員と<wbr>しても<wbr>活動しています。</p>
       </div>
       <div class="figstack">
         <img src="images/product.jpg" alt="モールドベースと金型部品" loading="lazy">
@@ -362,18 +382,18 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">NUMBERS</div>
-      <span class="num">02 ／ データで見る</span>
-      <h2>数字で見るKMS</h2>
+      <span class="num">02 ／ データで<wbr>見る</span>
+      <h2>数字で<wbr>見る<wbr>KMS</h2>
     </div>
     <dl class="nums rv">
-      <div><dt>設立</dt><dd>2002<i>年11月</i></dd><span class="note">2005年に株式会社化</span></div>
+      <div><dt>設立</dt><dd>2002<i>年11月</i></dd><span class="note">2005年に<wbr>株式会社化</span></div>
       <div><dt>従業員数</dt><dd>74<i>名</i></dd><span class="note">2023年4月時点</span></div>
-      <div><dt>拠点数</dt><dd>4<i>拠点</i></dd><span class="note">本社・営業所＋岩槻第一〜第三工場</span></div>
+      <div><dt>拠点数</dt><dd>4<i>拠点</i></dd><span class="note">本社・営業所＋岩槻第一〜<wbr>第三工場</span></div>
       <div><dt>資本金</dt><dd>3,000<i>万円</i></dd><span class="note">2005年 株式会社化</span></div>
-      <div><dt>未経験からの立ち上がり</dt><dd>2<i>週間</i></dd><span class="note">仕組みとシステムでベテランと同水準へ</span></div>
-      <div><dt>県外への転勤</dt><dd>0<i>回</i></dd><span class="note">勤務地はすべて埼玉県さいたま市</span></div>
+      <div><dt>未経験からの<wbr>立ち<wbr>上がり</dt><dd>2<i>週間</i></dd><span class="note">仕組みと<wbr>システムで<wbr>ベテランと<wbr>同水準へ</span></div>
+      <div><dt>県外への<wbr>転勤</dt><dd>0<i>回</i></dd><span class="note">勤務地は<wbr>すべて<wbr>埼玉県さいたま<wbr>市</span></div>
       <div><dt>モータースポーツ参戦</dt><dd>2013<i>年〜</i></dd><span class="note">TOYOTA GAZOO Racing GR86／BRZ Cup</span></div>
-      <div><dt>モールドベースのシェア</dt><dd class="sm">業界トップクラス</dd><span class="note">受注から納品までの一貫体制が強み</span></div>
+      <div><dt>モールドベースの<wbr>シェア</dt><dd class="sm">業界トップクラス</dd><span class="note">受注から<wbr>納品までの<wbr>一貫<wbr>体制が<wbr>強み</span></div>
     </dl>
   </div>
 </section>
@@ -383,16 +403,16 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">PEOPLE</div>
-      <span class="num">03 ／ KMSの素顔</span>
-      <h2>この会社は、<br>この顔ぶれでできている。</h2>
-      <p>表彰式も、バーベキューも、社員旅行も、レース観戦も。全力で働いて、全力で遊ぶ。写真がいちばん、KMSを語ってくれます。</p>
+      <span class="num">03 ／ KMSの<wbr>素顔</span>
+      <h2>この<wbr>会社は、<br>この<wbr>顔ぶれで<wbr>できている。</h2>
+      <p>表彰式も、<wbr>バーベキューも、<wbr>社員旅行も、<wbr>レース観戦も。<wbr>全力で<wbr>働いて、<wbr>全力で<wbr>遊ぶ。<wbr>写真が<wbr>いちばん、<wbr>KMSを<wbr>語ってくれます。</p>
     </div>
     <div class="gal rv">
-      <figure class="g-a"><img src="images/yakatabune.jpg" alt="屋形船での納会に集まった社員たち" loading="lazy"><figcaption>年に一度の納会</figcaption></figure>
+      <figure class="g-a"><img src="images/yakatabune.jpg" alt="屋形船での納会に集まった社員たち" loading="lazy"><figcaption>年に<wbr>一度の<wbr>納会</figcaption></figure>
       <figure class="g-b"><img src="images/stage.jpg" alt="社内イベントで盛り上がる社員たち" loading="lazy"><figcaption>全社イベント</figcaption></figure>
       <figure class="g-c"><img src="images/trip.jpg" alt="社員旅行での記念撮影" loading="lazy"><figcaption>社員旅行</figcaption></figure>
-      <figure class="g-d"><img src="images/bbq1.jpg" alt="バーベキューで乾杯する社員" loading="lazy"><figcaption>夏のBBQ</figcaption></figure>
-      <figure class="g-e"><img src="images/bbq2.jpg" alt="バーベキュー会場の社員たち" loading="lazy"><figcaption>夏のBBQ</figcaption></figure>
+      <figure class="g-d"><img src="images/bbq1.jpg" alt="バーベキューで乾杯する社員" loading="lazy"><figcaption>夏の<wbr>BBQ</figcaption></figure>
+      <figure class="g-e"><img src="images/bbq2.jpg" alt="バーベキュー会場の社員たち" loading="lazy"><figcaption>夏の<wbr>BBQ</figcaption></figure>
       <figure class="g-f"><img src="images/onsen.jpg" alt="社員旅行の宿でくつろぐ社員" loading="lazy"><figcaption>社員旅行</figcaption></figure>
       <figure class="g-g"><img src="images/entrance.jpg" alt="内定式に集まったメンバー" loading="lazy"><figcaption>内定式</figcaption></figure>
       <figure class="g-h"><img src="images/dinner.jpg" alt="食事会を楽しむ社員" loading="lazy"><figcaption>歓迎会</figcaption></figure>
@@ -405,9 +425,9 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">INTERVIEW</div>
-      <span class="num">04 ／ 働く人の声</span>
+      <span class="num">04 ／ 働く<wbr>人の<wbr>声</span>
       <h2>社員インタビュー</h2>
-      <p>KMSには4つの職種があります。それぞれの現場で働くメンバーへのインタビューを、現在準備中です。公開まで少々お待ちください。</p>
+      <p>KMSには<wbr>4つの<wbr>職種が<wbr>あります。<wbr>それぞれの<wbr>現場で<wbr>働く<wbr>メンバーへの<wbr>インタビューを、<wbr>現在準備中です。<wbr>公開まで<wbr>少々<wbr>お待ちください。</p>
     </div>
     <div class="itv rv">
       <article>
@@ -435,45 +455,45 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   <div class="cul-hero">
     <img src="images/racing.jpg" alt="GR86／BRZレースに参戦するKMSのマシンと応援する社員" loading="lazy">
     <div class="t wrap" style="max-width:none">
-      <h3>仕事も遊びも全力で楽しむ！</h3>
-      <p>TOYOTA GAZOO Racing GR86／BRZレースへの年間参戦、Jリーグ浦和レッズとのスポンサー契約。富士スピードウェイや埼玉スタジアムへ、みんなで応援に行きます。</p>
+      <h3>仕事も<wbr>遊びも<wbr>全力で<wbr>楽しむ！</h3>
+      <p>TOYOTA GAZOO Racing GR86／BRZレースへの<wbr>年間参戦、<wbr>Jリーグ浦和レッズとの<wbr>スポンサー契約。<wbr>富士スピードウェイや<wbr>埼玉スタジアムへ、<wbr>みんなで<wbr>応援に<wbr>行きます。</p>
     </div>
   </div>
   <div class="sec wrap" style="padding-top:clamp(48px,7vw,90px)">
     <div class="head rv">
       <div class="en-sub">CULTURE</div>
-      <span class="num">05 ／ 働く環境</span>
-      <h2>働きやすさは、<br>会社の成長戦略です。</h2>
+      <span class="num">05 ／ 働く<wbr>環境</span>
+      <h2>働きやすさは、<br>会社の<wbr>成長戦略です。</h2>
     </div>
     <div class="cul rv">
       <article>
         <img src="images/racing-crowd.jpg" alt="レース会場で応援するKMSの社員" loading="lazy">
         <div class="ttl"><b>01</b>モータースポーツ参戦</div>
-        <p>「金型業界と密接に関わる車への恩返し」としてGR86／BRZレースに参戦。社員も応援団としてサーキットへ。応援グッズやオリジナルTシャツも毎年つくっています。</p>
+        <p>「金型業界と<wbr>密接に<wbr>関わる<wbr>車への<wbr>恩返し」と<wbr>して<wbr>GR86／BRZレースに<wbr>参戦。<wbr>社員も<wbr>応援団と<wbr>して<wbr>サーキットへ。<wbr>応援グッズや<wbr>オリジナルTシャツも<wbr>毎年つくっています。</p>
       </article>
       <article>
         <img src="images/reds.jpg" alt="浦和レッズ（埼玉スタジアム）のエンブレム" loading="lazy" style="object-position:78% 50%">
         <div class="ttl"><b>02</b>浦和レッズ Reds Business Club</div>
-        <p>地域貢献の一環としてJリーグ浦和レッズのビジネスクラブ会員に。埼玉スタジアムでの観戦も、社内イベントのひとつです。</p>
+        <p>地域貢献の<wbr>一環と<wbr>して<wbr>Jリーグ浦和レッズの<wbr>ビジネスクラブ会員に。<wbr>埼玉スタジアムでの<wbr>観戦も、<wbr>社内イベントの<wbr>ひとつです。</p>
       </article>
       <article>
         <img src="images/hq-night.jpg" alt="ケー・エム・エス本社ビル" loading="lazy">
-        <div class="ttl"><b>03</b>拠点はすべて埼玉、県外転勤なし</div>
-        <p>本社・営業所と3つの工場は、すべてさいたま市内。県外への転勤や異動はありません。住む場所を変えずに、腰を据えてキャリアを築けます。</p>
+        <div class="ttl"><b>03</b>拠点は<wbr>すべて<wbr>埼玉、<wbr>県外転勤なし</div>
+        <p>本社・営業所と<wbr>3つの<wbr>工場は、<wbr>すべてさいたま市内。<wbr>県外への<wbr>転勤や<wbr>異動は<wbr>ありません。<wbr>住む場所を<wbr>変えずに、<wbr>腰を<wbr>据えて<wbr>キャリアを<wbr>築けます。</p>
       </article>
     </div>
     <div class="cul-list rv">
       <article>
-        <div class="ttl"><b>04</b>社内イベントが多い</div>
-        <p>バーベキュー、社員旅行、納会、表彰式。部署や年次を越えて集まる機会が多く、「家族のような会社」と言われる所以です。</p>
+        <div class="ttl"><b>04</b>社内イベントが<wbr>多い</div>
+        <p>バーベキュー、<wbr>社員旅行、<wbr>納会、<wbr>表彰式。<wbr>部署や<wbr>年次を<wbr>越えて<wbr>集まる<wbr>機会が<wbr>多く、<wbr>「家族のような<wbr>会社」と<wbr>言われる<wbr>所以です。</p>
       </article>
       <article>
         <div class="ttl"><b>05</b>研修制度</div>
-        <p>業界や専門的な知識を学ぶ座学研修、実務を通じてノウハウを学ぶ実務研修、社外研修など、個々の成長やTPOに合わせて実施。配属後も上司・先輩がしっかりサポートします。</p>
+        <p>業界や<wbr>専門的な<wbr>知識を<wbr>学ぶ座学研修、<wbr>実務を<wbr>通じて<wbr>ノウハウを<wbr>学ぶ実務研修、<wbr>社外研修など、<wbr>個々の<wbr>成長や<wbr>TPOに<wbr>合わせて<wbr>実施。<wbr>配属後も<wbr>上司・先輩が<wbr>しっかり<wbr>サポートします。</p>
       </article>
       <article>
-        <div class="ttl"><b>06</b>働き方改革・福利厚生</div>
-        <p>育休をはじめとした制度の整備、福利厚生の強化にも全力で取り組んでいます。長く働ける環境を、会社として本気でつくっています。</p>
+        <div class="ttl"><b>06</b>働き方<wbr>改革・福利厚生</div>
+        <p>育休を<wbr>はじめとした<wbr>制度の<wbr>整備、<wbr>福利厚生の<wbr>強化にも<wbr>全力で<wbr>取り<wbr>組んでいます。<wbr>長く<wbr>働ける<wbr>環境を、<wbr>会社と<wbr>して<wbr>本気で<wbr>つくっています。</p>
       </article>
     </div>
   </div>
@@ -485,14 +505,14 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
     <div class="head rv">
       <div class="en-sub">MESSAGE</div>
       <span class="num">06 ／ 代表メッセージ</span>
-      <h2>従業員を大切にすることが、<br>最良の成長戦略。</h2>
+      <h2>従業員を<wbr>大切に<wbr>する<wbr>ことが、<br>最良の<wbr>成長戦略。</h2>
     </div>
     <div class="msg rv">
       <img src="images/award.jpg" alt="社内表彰式で社員とともに喜ぶ代表取締役 北見雄一" loading="lazy">
       <div>
-        <p>2002年に設立し21年目に突入した当社。途中、リーマンショックや2020年〜の新型コロナウイルスによる世界的な不況に見舞われましたが、2012年の第2工場竣工、2014年の本社ビル竣工、2022年3月の第三工場竣工など、順調に成長を続けています。</p>
-        <p>その成長を支えてきたのは、国内屈指の技術力。そしてその技術を実現するのは人です。だからこそ、当社では創業当初から従業員を大切にする経営を続けてきました。労働環境を整える、人材教育にシッカリ投資する。また早くから大きな裁量を任せ、成長を促していくことも当社の方針です。</p>
-        <p>会社の歯車ではなく、1人の人間として、向き合っていく。その姿勢こそが、高い技術力を実現し成長を牽引してきたのです。これからも大切な仲間たちと成長を目指していきます。</p>
+        <p>2002年に<wbr>設立し21年目に<wbr>突入した<wbr>当社。<wbr>途中、<wbr>リーマンショックや<wbr>2020年〜の<wbr>新型コロナウイルスに<wbr>よる<wbr>世界的な<wbr>不況に<wbr>見舞われましたが、<wbr>2012年の<wbr>第2工場竣工、<wbr>2014年の<wbr>本社ビル竣工、<wbr>2022年3月の<wbr>第三工場竣工など、<wbr>順調に<wbr>成長を<wbr>続けています。</p>
+        <p>その<wbr>成長を<wbr>支えてきたのは、<wbr>国内屈指の<wbr>技術力。<wbr>そして<wbr>その<wbr>技術を<wbr>実現するのは<wbr>人です。<wbr>だから<wbr>こそ、<wbr>当社では<wbr>創業当初から<wbr>従業員を<wbr>大切に<wbr>する<wbr>経営を<wbr>続けてきました。<wbr>労働環境を<wbr>整える、<wbr>人材教育に<wbr>シッカリ投資する。<wbr>また<wbr>早くから<wbr>大きな<wbr>裁量を<wbr>任せ、<wbr>成長を<wbr>促していく<wbr>ことも<wbr>当社の<wbr>方針です。</p>
+        <p>会社の<wbr>歯車ではなく、<wbr>1人の<wbr>人間と<wbr>して、<wbr>向き合っていく。<wbr>その<wbr>姿勢こそが、<wbr>高い<wbr>技術力を<wbr>実現し成長を<wbr>牽引してきたのです。<wbr>これからも<wbr>大切な<wbr>仲間たちと<wbr>成長を<wbr>目指していきます。</p>
         <div class="sign">代表取締役<b>北見 雄一</b></div>
       </div>
     </div>
@@ -506,43 +526,43 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
       <div class="en-sub">JOBS</div>
       <span class="num">07 ／ 募集職種・募集要項</span>
       <h2>募集要項</h2>
-      <p>学部学科や専門知識は一切問いません。入社後のジョブチェンジ、選考途中での希望職種の変更も可能です。</p>
+      <p>学部<wbr>学科や<wbr>専門知識は<wbr>一切問いません。<wbr>入社後の<wbr>ジョブチェンジ、<wbr>選考途中での<wbr>希望職種の<wbr>変更も<wbr>可能です。</p>
     </div>
     <div class="jobs rv">
       <article>
         <span class="no en">JOB 01</span>
         <h3>営業／法人向け</h3>
-        <p>既存のお客様が中心。売り込む営業ではなく、雑談のなかからお客様の困りごとを見つけ、社内をつないで解決する仕事です。</p>
-        <span class="place">本社・営業所（さいたま市桜区）</span>
+        <p>既存の<wbr>お客様が<wbr>中心。<wbr>売り込む営業ではなく、<wbr>雑談の<wbr>なかから<wbr>お客様の<wbr>困りごとを<wbr>見つけ、<wbr>社内を<wbr>つないで<wbr>解決する<wbr>仕事です。</p>
+        <span class="place">本社・営業所<wbr>（さいたま<wbr>市桜区）</span>
       </article>
       <article>
         <span class="no en">JOB 02</span>
         <h3>営業事務</h3>
-        <p>受注から納品までの流れを支える司令塔。休憩は各自のタイミングで自由に取れるので、自分のペースで集中できる環境です。</p>
-        <span class="place">本社・営業所（さいたま市桜区）</span>
+        <p>受注から<wbr>納品までの<wbr>流れを<wbr>支える<wbr>司令塔。<wbr>休憩は<wbr>各自の<wbr>タイミングで<wbr>自由に<wbr>取れるので、<wbr>自分の<wbr>ペースで<wbr>集中できる<wbr>環境です。</p>
+        <span class="place">本社・営業所<wbr>（さいたま<wbr>市桜区）</span>
       </article>
       <article>
         <span class="no en">JOB 03</span>
         <h3>機械系CAD／CAMオペレーター</h3>
-        <p>お客様の要望をもとに、モールドベースの加工データを作成。描いたデータがそのまま製品になる、ものづくりの中核です。</p>
-        <span class="place">岩槻第一工場（さいたま市岩槻区）</span>
+        <p>お客様の<wbr>要望を<wbr>もとに、<wbr>モールドベースの<wbr>加工データを<wbr>作成。<wbr>描いた<wbr>データが<wbr>そのまま<wbr>製品に<wbr>なる、<wbr>もの<wbr>づくりの<wbr>中核です。</p>
+        <span class="place">岩槻第一工<wbr>場<wbr>（さいたま<wbr>市岩槻区）</span>
       </article>
       <article>
         <span class="no en">JOB 04</span>
         <h3>マシンオペレーター</h3>
-        <p>最先端の工作機械を操作し、モールドベースを削り出す仕事。職人技を仕組みに分解しているため、未経験からでも短期間で戦力になれます。</p>
-        <span class="place">岩槻第一〜第三工場（さいたま市岩槻区）</span>
+        <p>最先端の<wbr>工作機械を<wbr>操作し、<wbr>モールドベースを<wbr>削り出す仕事。<wbr>職人技を<wbr>仕組みに<wbr>分解している<wbr>ため、<wbr>未経験から<wbr>でも<wbr>短期間で<wbr>戦力に<wbr>なれます。</p>
+        <span class="place">岩槻第一〜<wbr>第三工場<wbr>（さいたま<wbr>市岩槻区）</span>
       </article>
     </div>
 
     <table class="spec rv">
-      <tr><th>事業内容</th><td>金型材料の販売および加工業（入子、6F6G、水穴、金型、部品加工）／モールドベースの受注〜製作〜納品までの一貫生産</td></tr>
-      <tr><th>募集職種</th><td>営業（法人向け）／営業事務／機械系CAD・CAMオペレーター／マシンオペレーター<br>※学部学科・専門知識は不問</td></tr>
-      <tr><th>勤務地</th><td>営業・営業事務・CAD／CAMオペレーター：本社（埼玉県さいたま市桜区中島2-22-14）<br>機械系CAD／CAMオペレーター：岩槻第一工場（さいたま市岩槻区上野3-9-1）<br>マシンオペレーター：岩槻第一・第二・第三工場（さいたま市岩槻区）<br>※県外への転勤・異動はありません</td></tr>
-      <tr><th>研修制度</th><td>制度あり（社内研修／社外研修／実務研修 ほか）<br>配属後も上司・先輩がサポートします</td></tr>
-      <tr><th>選考で重視する点</th><td>「人物」を最も重視しています。選考基準は会社説明会でお話しします</td></tr>
-      <tr><th>内定までの期間</th><td>1カ月程度</td></tr>
-      <tr><th>給与・待遇・休日</th><td>詳細は会社説明会・募集要項にてご案内します</td></tr>
+      <tr><th>事業内容</th><td>金型材料の<wbr>販売および<wbr>加工業<wbr>（入子、<wbr>6F6G、<wbr>水穴、<wbr>金型、<wbr>部品加工）<wbr>／モールドベースの<wbr>受注〜製作〜納品までの<wbr>一貫生産</td></tr>
+      <tr><th>募集職種</th><td>営業<wbr>（法人向け）<wbr>／営業事務／機械系CAD・CAMオペレーター／マシンオペレーター<br>※学部学科・専門知識は<wbr>不問</td></tr>
+      <tr><th>勤務地</th><td>営業・営業事務・CAD／CAMオペレーター：本社<wbr>（埼玉県さいたま<wbr>市桜区中島2-22-14）<br>機械系CAD／CAMオペレーター：岩槻第一工<wbr>場<wbr>（さいたま<wbr>市岩槻区上野3-9-1）<br>マシンオペレーター：岩槻第一・<wbr>第二・第三工場<wbr>（さいたま<wbr>市岩槻区）<br>※県外への<wbr>転勤・異動は<wbr>ありません</td></tr>
+      <tr><th>研修制度</th><td>制度<wbr>あり<wbr>（社内研修／社外研修／実務研修 ほか）<br>配属後も<wbr>上司・先輩が<wbr>サポートします</td></tr>
+      <tr><th>選考で<wbr>重視する<wbr>点</th><td>「人物」を<wbr>最も<wbr>重視しています。<wbr>選考基準は<wbr>会社説明会で<wbr>お話しします</td></tr>
+      <tr><th>内定までの<wbr>期間</th><td>1カ月程度</td></tr>
+      <tr><th>給与・待遇・休日</th><td>詳細は<wbr>会社説明会・募集要項にて<wbr>ご案内します</td></tr>
     </table>
 
   </div>
@@ -553,41 +573,41 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   <div class="wrap" style="max-width:900px">
     <div class="head rv">
       <div class="en-sub">FAQ</div>
-      <span class="num">08 ／ よくあるご質問</span>
-      <h2>採用に関するご質問</h2>
+      <span class="num">08 ／ よく<wbr>ある<wbr>ご質問</span>
+      <h2>採用に<wbr>関する<wbr>ご質問</h2>
     </div>
     <div class="faq rv">
       <details open>
-        <summary>募集している職種はなんですか？<span class="v"></span></summary>
+        <summary>募集している<wbr>職種は<wbr>なんですか？<span class="v"></span></summary>
         <div class="a">・営業／法人向け
 ・営業事務
 ・機械系CAD／CAMオペレーター
 ・マシンオペレーター
 
-自動車、次世代自動車各部品など金型の土台となる「モールドベース」の製作・受注・販売・納品までを各セクションごとに行います。
-※学部学科や専門知識は一切問いません！
-※入社後のジョブチェンジ、選考途中の場合でも希望職種の変更も可能です。</div>
+自動車、<wbr>次世代自動車各部<wbr>品など<wbr>金型の<wbr>土台と<wbr>なる<wbr>「モールドベース」の<wbr>製作・受注・販売・納品までを<wbr>各セクションごとに<wbr>行います。
+※学部<wbr>学科や<wbr>専門知識は<wbr>一切問いません！
+※入社後の<wbr>ジョブチェンジ、<wbr>選考途中の<wbr>場合でも<wbr>希望職種の<wbr>変更も<wbr>可能です。</div>
       </details>
       <details>
-        <summary>勤務地はどこですか？<span class="v"></span></summary>
-        <div class="a">営業・営業事務・CAD／CAMオペレーター：本社（埼玉県さいたま市桜区）
-機械系CAD／CAMオペレーター：第一工場（埼玉県さいたま市岩槻区）
-マシンオペレーター：第一工場、第二工場、第三工場（埼玉県さいたま市岩槻区）
-※県外へ転勤や移動はありません。</div>
+        <summary>勤務地は<wbr>どこですか？<span class="v"></span></summary>
+        <div class="a">営業・営業事務・CAD／CAMオペレーター：本社<wbr>（埼玉県さいたま<wbr>市桜区）
+機械系CAD／CAMオペレーター：第一工場<wbr>（埼玉県さいたま<wbr>市岩槻区）
+マシンオペレーター：第一工場、<wbr>第二工場、<wbr>第三工場<wbr>（埼玉県さいたま<wbr>市岩槻区）
+※県外へ<wbr>転勤や<wbr>移動は<wbr>ありません。</div>
       </details>
       <details>
-        <summary>入社後の研修制度はありますか？<span class="v"></span></summary>
-        <div class="a">制度あり（社内研修／社外研修／実務研修 ほか）
+        <summary>入社後の<wbr>研修制度は<wbr>ありますか？<span class="v"></span></summary>
+        <div class="a">制度<wbr>あり<wbr>（社内研修／社外研修／実務研修 ほか）
 
-業界や専門的な知識をじっくりと学べる座学形式の研修から、実際の業務を通じて業務のポイントやノウハウを学べる実務研修ほか、個々の成長やTPOに合わせた研修を行っています。
+業界や<wbr>専門的な<wbr>知識を<wbr>じっくりと<wbr>学べる<wbr>座学形式の<wbr>研修から、<wbr>実際の<wbr>業務を<wbr>通じて<wbr>業務の<wbr>ポイントや<wbr>ノウハウを<wbr>学べる<wbr>実務研修ほか、<wbr>個々の<wbr>成長や<wbr>TPOに<wbr>合わせた<wbr>研修を<wbr>行っています。
 
-各事業部に配属されてからも、上司や先輩がしっかりとサポートしていくので安心して業務に臨むことができます。わからないことがあれば1人で悩まず、気軽に相談してください！</div>
+各事業部に<wbr>配属されてからも、<wbr>上司や<wbr>先輩が<wbr>しっかりと<wbr>サポートしていくので<wbr>安心して<wbr>業務に<wbr>臨むことができます。<wbr>わからない<wbr>ことが<wbr>あれば<wbr>1人で<wbr>悩まず、<wbr>気軽に<wbr>相談してください！</div>
       </details>
       <details>
-        <summary>未経験・文系でも大丈夫ですか？<span class="v"></span></summary>
-        <div class="a">まったく問題ありません。
+        <summary>未経験・文系でも<wbr>大丈夫ですか？<span class="v"></span></summary>
+        <div class="a">まったく<wbr>問題<wbr>ありません。
 
-当社は職人の技を分解し、仕組みとシステムによって再構成しています。そのため、専門知識のない方でも2週間ほどでベテランと同水準の仕事ができる環境が整っています。実際に、文系出身・異業種からの入社者も多数活躍しています。</div>
+当社は<wbr>職人の<wbr>技を<wbr>分解し、<wbr>仕組みと<wbr>システムに<wbr>よって<wbr>再構成しています。<wbr>その<wbr>ため、<wbr>専門知識の<wbr>ない方でも<wbr>2週間ほどで<wbr>ベテランと<wbr>同水準の<wbr>仕事が<wbr>できる<wbr>環境が<wbr>整っています。<wbr>実際に、<wbr>文系出身・異業種からの<wbr>入社者も<wbr>多数活躍しています。</div>
       </details>
     </div>
   </div>
@@ -598,9 +618,9 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   <img src="images/entrance.jpg" alt="" aria-hidden="true" loading="lazy">
   <div class="in">
     <div class="en-sub">ENTRY</div>
-    <h2>モノづくり日本一への挑戦。<br>その一員になりませんか。</h2>
-    <p>「金型加工」業界においてTOPクラスのシェアを持つケー・エム・エス。今後は、業界とモノづくりの更なる発展や地域に密着した企業をめざして、世の中に貢献できる「人づくり」に注力していきます。</p>
-    <a href="https://e-kms.co.jp/contact/" class="btn-entry" target="_blank" rel="noopener">エントリーはこちら</a>
+    <h2>モノづくり日本一への<wbr>挑戦。<br>その<wbr>一員に<wbr>なりませんか。</h2>
+    <p>「金型加工」<wbr>業界に<wbr>おいて<wbr>TOPクラスの<wbr>シェアを<wbr>持つケー・エム・エス。<wbr>今後は、<wbr>業界と<wbr>モノづくりの<wbr>更なる<wbr>発展や<wbr>地域に<wbr>密着した<wbr>企業を<wbr>めざして、<wbr>世の<wbr>中に<wbr>貢献できる<wbr>「人づくり」に<wbr>注力していきます。</p>
+    <a href="https://e-kms.co.jp/contact/" class="btn-entry" target="_blank" rel="noopener">エントリーは<wbr>こちら</a>
   </div>
 </section>
 
@@ -610,28 +630,28 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
       <div>
         <div class="brand"><img class="mark" src="images/kms-mark.png" alt="ケー・エム・エス株式会社" style="height:34px"> <span class="sub">ケー・エム・エス株式会社</span></div>
         <div class="base">
-          設立：2002年11月22日／資本金：3,000万円／従業員数：74名（2023年4月）<br>
+          設立：2002年11月22日<br>資本金：3,000万円<br>従業員数：74名<wbr>（2023年4月）<br>
           代表取締役：北見 雄一<br>
-          本社・営業所：埼玉県さいたま市桜区中島2-22-14<br>
-          岩槻第一工場：さいたま市岩槻区上野3-9-1<br>
-          岩槻第二工場：さいたま市岩槻区大字掛字下566-1<br>
-          岩槻第三工場：さいたま市岩槻区上野4-5-1
+          本社・営業所：埼玉県さいたま<wbr>市桜区中島2-22-14<br>
+          岩槻第一工<wbr>場：さいたま<wbr>市岩槻区上野3-9-1<br>
+          岩槻第二工場：さいたま<wbr>市岩槻区大字掛字下566-1<br>
+          岩槻第三工場：さいたま<wbr>市岩槻区上野4-5-1
         </div>
       </div>
       <div>
         <div class="links">
-          <a href="#about">私たちについて</a>
-          <a href="#numbers">数字で見るKMS</a>
-          <a href="#people">社員の素顔</a>
+          <a href="#about">私たちに<wbr>ついて</a>
+          <a href="#numbers">数字で<wbr>見る<wbr>KMS</a>
+          <a href="#people">社員の<wbr>素顔</a>
           <a href="#interview">社員インタビュー</a>
-          <a href="#culture">働く環境</a>
+          <a href="#culture">働く<wbr>環境</a>
           <a href="#jobs">募集要項</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="links" style="margin-top:24px">
           <a href="https://e-kms.co.jp/" target="_blank" rel="noopener">コーポレートサイト ↗</a>
           <a href="https://e-kms.co.jp/motorsports/" target="_blank" rel="noopener">モータースポーツ参戦記 ↗</a>
-          <a href="https://e-kms.co.jp/contact/" target="_blank" rel="noopener">お問い合わせ ↗</a>
+          <a href="https://e-kms.co.jp/contact/" target="_blank" rel="noopener">お問い<wbr>合わせ ↗</a>
         </div>
       </div>
     </div>
