@@ -177,55 +177,19 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
   .g-g,.g-h{grid-column:span 3;grid-row:span 1}
 }
 
-/* ---------- interview ---------- */
-.itv-note{
-  border:1px dashed var(--gray-2);background:#fff;padding:14px 18px;font-size:12px;color:var(--muted);
-  margin-bottom:30px;line-height:1.8;
-}
-.itv-note b{color:var(--ink)}
+/* ---------- interview (coming soon) ---------- */
 .itv{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px)}
-.itv{align-items:stretch}
-.itv article{background:#fff;cursor:pointer;transition:transform .3s,box-shadow .3s;border:1px solid var(--gray-2);display:flex;flex-direction:column}
-.itv article:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px rgba(0,0,0,.28)}
+.itv article{background:#fff;border:1px solid var(--gray-2);display:flex;flex-direction:column}
 .itv .ph{
   aspect-ratio:3/4;position:relative;overflow:hidden;
   background:repeating-linear-gradient(135deg,#E9EBEC 0 12px,#E3E6E7 12px 24px);
-  display:flex;flex-direction:column;justify-content:flex-end;padding:18px;
+  display:flex;align-items:center;justify-content:center;
 }
-.itv .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.itv .ph::before{
-  content:"";position:absolute;right:0;top:0;width:0;height:0;
-  border-style:solid;border-width:0 56px 56px 0;border-color:transparent var(--green) transparent transparent;
-}
-.itv .ph::after{
-  content:"";position:absolute;left:16px;right:16px;top:16px;bottom:16px;border:1px dashed rgba(14,15,17,.2);
-}
-.itv .ph .no{position:absolute;top:14px;left:16px;font-family:Anton;font-size:44px;color:rgba(14,15,17,.16);line-height:1}
-.itv .ph .ph-lbl{position:relative;color:rgba(14,15,17,.4);font-family:Anton;font-size:10px;letter-spacing:.24em}
-.itv .ph .ph-jp{position:relative;color:rgba(14,15,17,.55);font-size:12px;font-weight:700;letter-spacing:.06em;margin-top:4px}
-.itv .body{padding:20px 20px 24px;display:flex;flex-direction:column;flex:1}
-.itv .role{display:inline-block;font-size:10.5px;font-weight:900;letter-spacing:.1em;color:#fff;background:var(--ink);padding:5px 10px;margin-bottom:14px}
-.itv h3{font-size:16px;font-weight:900;line-height:1.6;margin-bottom:12px}
-.itv .who{font-size:11.5px;color:var(--muted);border-top:1px solid var(--gray-2);padding-top:12px;margin-top:14px}
-.itv .lead{font-size:13px;color:#4A4F55}
-.itv .more{font-family:Anton;font-size:10px;letter-spacing:.18em;color:var(--green);margin-top:auto;padding-top:14px;display:block}
+.itv .ph .no{position:absolute;top:14px;left:16px;font-family:Anton;font-size:44px;color:rgba(14,15,17,.14);line-height:1}
+.itv .ph .soon{font-family:Anton;font-size:clamp(20px,2.2vw,28px);letter-spacing:.12em;color:rgba(14,15,17,.42);line-height:1}
+.itv .body{padding:16px 18px 18px}
+.itv .role{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.08em;color:#fff;background:var(--ink);padding:5px 10px}
 @media(max-width:980px){.itv{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.itv{grid-template-columns:1fr}}
-
-/* modal */
-.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
-.modal.on{display:flex}
-.modal .bg{position:absolute;inset:0;background:rgba(10,11,13,.72);backdrop-filter:blur(3px)}
-.modal .card{position:relative;background:#fff;max-width:760px;width:100%;max-height:86vh;overflow-y:auto;padding:clamp(28px,5vw,56px)}
-.modal .close{position:absolute;top:14px;right:14px;background:var(--ink);color:#fff;border:0;width:38px;height:38px;font-size:18px;cursor:pointer}
-.modal .role{display:inline-block;font-size:10.5px;font-weight:900;letter-spacing:.1em;color:#fff;background:var(--green);padding:5px 10px;margin-bottom:16px}
-.modal h3{font-size:clamp(20px,3vw,30px);font-weight:900;line-height:1.5;margin-bottom:10px}
-.modal .who{color:var(--muted);font-size:12.5px;margin-bottom:26px}
-.modal .qa{border-top:1px solid var(--gray-2);padding-top:22px;margin-top:22px}
-.modal .qa:first-of-type{border-top:0;padding-top:0;margin-top:0}
-.modal .q{font-weight:900;font-size:15px;margin-bottom:10px;display:flex;gap:10px}
-.modal .q::before{content:"Q";font-family:Anton;color:var(--green);font-size:17px}
-.modal .a{color:#33383D;font-size:14px}
 
 /* ---------- culture ---------- */
 .cul-hero{position:relative;height:clamp(300px,52vw,540px);overflow:hidden}
@@ -454,55 +418,25 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
       <div class="en-sub">INTERVIEW</div>
       <span class="num">04 ／ 働く人の声</span>
       <h2>社員インタビュー</h2>
-      <p>KMSには4つの職種があります。それぞれの現場で、どんな人が、どんな一日を過ごしているのか。実際に働くメンバーに聞きました。</p>
+      <p>KMSには4つの職種があります。それぞれの現場で働くメンバーへのインタビューを、現在準備中です。公開まで少々お待ちください。</p>
     </div>
-    <p class="itv-note rv"><b>※ この4名分は構成見本（ダミー原稿）です。</b>実際の社員のお名前・お写真・回答をいただければ、そのまま差し替えて公開できる状態にしてあります。写真は縦3:4での撮影がおすすめです。</p>
     <div class="itv rv">
-
-      <article data-itv="1">
-        <div class="ph"><span class="no en">01</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
-        <div class="body">
-          <span class="role">営業</span>
-          <h3>「雑談」から、次の仕事が生まれる。</h3>
-          <p class="lead">売り込まない営業。お客様の困りごとを、雑談のなかから拾い上げる仕事です。</p>
-          <div class="who">◯◯部／20XX年入社／文系学部出身</div>
-          <span class="more en">READ MORE →</span>
-        </div>
+      <article>
+        <div class="ph"><span class="no en">01</span><span class="soon">COMING SOON</span></div>
+        <div class="body"><span class="role">営業</span></div>
       </article>
-
-      <article data-itv="2">
-        <div class="ph"><span class="no en">02</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
-        <div class="body">
-          <span class="role">営業事務</span>
-          <h3>受注から納品まで、流れを止めない。</h3>
-          <p class="lead">受注から納品までを支える司令塔。常識にとらわれない働き方がここにあります。</p>
-          <div class="who">◯◯部／20XX年入社／未経験入社</div>
-          <span class="more en">READ MORE →</span>
-        </div>
+      <article>
+        <div class="ph"><span class="no en">02</span><span class="soon">COMING SOON</span></div>
+        <div class="body"><span class="role">営業事務</span></div>
       </article>
-
-      <article data-itv="3">
-        <div class="ph"><span class="no en">03</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
-        <div class="body">
-          <span class="role">機械系CAD／CAMオペレーター</span>
-          <h3>図面が、目の前で鉄になる。</h3>
-          <p class="lead">CADで描いたデータが、そのまま製品になる瞬間。ものづくりの醍醐味です。</p>
-          <div class="who">◯◯部／20XX年入社／専門知識なしで入社</div>
-          <span class="more en">READ MORE →</span>
-        </div>
+      <article>
+        <div class="ph"><span class="no en">03</span><span class="soon">COMING SOON</span></div>
+        <div class="body"><span class="role">機械系CAD／CAMオペレーター</span></div>
       </article>
-
-      <article data-itv="4">
-        <div class="ph"><span class="no en">04</span><span class="ph-lbl en">PHOTO</span><span class="ph-jp">写真を差し替え</span></div>
-        <div class="body">
-          <span class="role">マシンオペレーター</span>
-          <h3>2週間で、一人前になれた理由。</h3>
-          <p class="lead">職人技を仕組みに分解しているから、未経験でも最短距離で戦力になれます。</p>
-          <div class="who">◯◯部／20XX年入社／異業種から転職</div>
-          <span class="more en">READ MORE →</span>
-        </div>
+      <article>
+        <div class="ph"><span class="no en">04</span><span class="soon">COMING SOON</span></div>
+        <div class="body"><span class="role">マシンオペレーター</span></div>
       </article>
-
     </div>
   </div>
 </section>
@@ -739,15 +673,6 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal" id="modal" role="dialog" aria-modal="true">
-  <div class="bg" data-close></div>
-  <div class="card">
-    <button class="close" data-close aria-label="閉じる">×</button>
-    <div id="m-body"></div>
-  </div>
-</div>
-
 <script>
 (function(){
   var hd=document.getElementById('hd');
@@ -766,41 +691,6 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
 
-  /* ---- 社員インタビュー（ダミー原稿：取材後に差し替え） ---- */
-  var ITV={
-   1:{role:'営業',title:'「雑談」から、次の仕事が生まれる。',who:'◯◯部／20XX年入社／文系学部出身',
-      qa:[['KMSに入社した理由を教えてください。','（ここに回答が入ります）面接というより雑談のような時間で、飾らない人たちだなと感じたのが決め手でした。製造業の知識はまったくありませんでしたが、「知識はあとから付く」と言ってもらえて安心しました。'],
-          ['仕事のやりがいは？','（ここに回答が入ります）当社の営業は既存のお客様が中心なので、売り込む場面はほとんどありません。雑談のなかで出てきた「実はこれ困ってるんだよね」を拾って、社内の技術メンバーにつなぐ。それが形になったときがいちばん嬉しい瞬間です。'],
-          ['職場の雰囲気は？','（ここに回答が入ります）部署の垣根がとにかく低いです。工場のメンバーとも普段から話しているので、無理なお願いも「まあやってみるか」と受けてもらえる。この距離感が当社の強みだと思います。'],
-          ['どんな人と働きたいですか？','（ここに回答が入ります）人と話すのが好きな人。専門知識より、そこがいちばん大事だと思っています。']]},
-   2:{role:'営業事務',title:'受注から納品まで、流れを止めない。',who:'◯◯部／20XX年入社／未経験入社',
-      qa:[['どんな仕事をしていますか？','（ここに回答が入ります）受注のデータ入力から、納期の調整、工場との連携まで。営業と製造のあいだに立って、全体の流れが止まらないようにするのが役割です。'],
-          ['働き方について教えてください。','（ここに回答が入ります）休憩は決まった時間ではなく、各自のタイミングで自由に取れます。集中する時間と休む時間を自分で組み立てられるのが、働きやすいところです。'],
-          ['未経験でも大丈夫でしたか？','（ここに回答が入ります）まったく問題なかったです。手順がきちんと整理されているので、覚えることは多くても迷うことはありませんでした。'],
-          ['働きやすさは？','（ここに回答が入ります）県外転勤がないので、生活の予定が立てやすいです。育休の制度も整ってきていて、長く働くイメージが持てます。']]},
-   3:{role:'機械系CAD／CAMオペレーター',title:'図面が、目の前で鉄になる。',who:'◯◯部／20XX年入社／専門知識なしで入社',
-      qa:[['仕事内容を教えてください。','（ここに回答が入ります）お客様からいただいた仕様をもとに、モールドベースの加工データをCAD／CAMで作成します。そのデータが工作機械に渡り、実際の製品になります。'],
-          ['入社前の知識は必要ですか？','（ここに回答が入ります）私はCADを触ったこともありませんでした。当社は職人の技を仕組みに分解しているので、順番どおりに覚えていけば必ずできるようになります。'],
-          ['やりがいを感じる瞬間は？','（ここに回答が入ります）自分が描いたデータが、目の前で鉄の塊から削り出されていく瞬間です。スマートフォンのケースや車の部品の「土台」を自分がつくっていると思うと、単純に誇らしい。'],
-          ['これからの目標は？','（ここに回答が入ります）もっと難しい形状に挑戦して、若いメンバーに教えられる立場になることです。']]},
-   4:{role:'マシンオペレーター',title:'2週間で、一人前になれた理由。',who:'◯◯部／20XX年入社／異業種から転職',
-      qa:[['転職のきっかけは？','（ここに回答が入ります）まったくの異業種からの転職でした。ものづくりに関わってみたかったのと、面接で会った人たちの雰囲気が良かったのが理由です。'],
-          ['本当に2週間で仕事ができるようになりますか？','（ここに回答が入ります）「なんとなく」で覚える部分がないんです。手順も判断基準もすべて言語化されているので、迷わない。もちろんその先の奥深さはありますが、戦力として立てるまでは本当に早いです。'],
-          ['職場の雰囲気は？','（ここに回答が入ります）体育会系というより、家族に近いです。バーベキューも社員旅行も、みんな本気で楽しんでいます。レース観戦に行くのも毎年の楽しみです。'],
-          ['どんな人に来てほしいですか？','（ここに回答が入ります）経験は本当にいりません。仲間と一緒に、全力で楽しめる人に来てほしいです。']]}
-  };
-  var modal=document.getElementById('modal'), mb=document.getElementById('m-body');
-  document.querySelectorAll('.itv article').forEach(function(el){
-    el.addEventListener('click',function(){
-      var d=ITV[el.dataset.itv]; if(!d) return;
-      mb.innerHTML='<span class="role">'+d.role+'</span><h3>'+d.title+'</h3><div class="who">'+d.who+'</div>'+
-        d.qa.map(function(x){return '<div class="qa"><div class="q">'+x[0]+'</div><div class="a">'+x[1]+'</div></div>';}).join('');
-      modal.classList.add('on'); document.body.style.overflow='hidden';
-    });
-  });
-  function closeM(){ modal.classList.remove('on'); document.body.style.overflow=''; }
-  modal.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click',closeM); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
 })();
 </script>
 </body>
