@@ -15,8 +15,7 @@ GitHub: https://github.com/inc-worcry/kms-recruit
 1. **社員インタビュー（4枠）** … `index.html` 内の `ITV` オブジェクト（JS）に本文、
    `.itv article` の `.ph`（写真枠）に `<img src="images/itv-01.jpg" alt="">` を追加すれば写真が入る。
    推奨アスペクト比 3:4（縦）。
-2. **ENTRYボタンのリンク** … 現在は `https://e-kms.co.jp/contact/`。
-   マイナビ等のエントリーURLに差し替える。
+2. **ENTRYボタンのリンク** … engage（https://en-gage.net/e-kms_saiyo/）に紐付け済み。
 3. **給与・待遇・休日** … 募集要項テーブルは「説明会でご案内」表記。確定情報が出たら記載。
 4. **従業員数** … 74名（2023年4月）。最新値があれば更新。
 
