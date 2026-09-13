@@ -109,14 +109,6 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
 .hero .scroll span{position:absolute;bottom:0;left:50%;width:1px;height:64px;background:var(--green);transform-origin:top;animation:scrollLine 2.2s infinite}
 @keyframes scrollLine{0%{transform:scaleY(0)}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* ---------- marquee ---------- */
-.marquee{background:var(--ink);color:#fff;padding:16px 0;overflow:hidden;border-top:1px solid rgba(255,255,255,.08)}
-.marquee ul{display:flex;list-style:none;width:max-content;animation:slide 32s linear infinite}
-.marquee li{font-family:Anton;font-size:clamp(20px,3vw,34px);letter-spacing:.06em;padding:0 26px;white-space:nowrap;display:flex;align-items:center;gap:26px}
-.marquee li::after{content:"";width:8px;height:8px;background:var(--green);transform:rotate(45deg)}
-.marquee li:nth-child(even){color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
-@keyframes slide{to{transform:translateX(-50%)}}
-
 /* ---------- 求む band ---------- */
 .wanted{background:var(--green);color:#fff;text-align:center;padding:clamp(72px,11vw,130px) var(--pad);position:relative;overflow:hidden}
 .wanted::before{
@@ -327,7 +319,7 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
-  .hero img{animation:none}.marquee ul{animation:none}
+  .hero img{animation:none}
   html{scroll-behavior:auto}
 }
 </style>
@@ -362,14 +354,6 @@ footer .copy{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,
   </div>
   <div class="scroll en">SCROLL<span></span></div>
 </section>
-
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <ul>
-    <li>FULL THROTTLE</li><li>MOLD BASE</li><li>志 ・ 和 ・ 力</li><li>SINCE 2002</li><li>GR86／BRZ RACE</li><li>SAITAMA</li>
-    <li>FULL THROTTLE</li><li>MOLD BASE</li><li>志 ・ 和 ・ 力</li><li>SINCE 2002</li><li>GR86／BRZ RACE</li><li>SAITAMA</li>
-  </ul>
-</div>
 
 <!-- 求む -->
 <section class="wanted">
