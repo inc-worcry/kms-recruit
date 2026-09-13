@@ -66,7 +66,7 @@ nav.gnav a:hover{opacity:.55}
 .navtoggle{display:none;width:44px;height:44px;background:none;border:0;cursor:pointer;position:relative;z-index:2}
 .navtoggle span{display:block;height:2px;width:24px;background:#fff;margin:5px auto;transition:.3s}
 header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
-@media(max-width:900px){
+@media(max-width:1024px){
   nav.gnav{
     position:fixed;inset:0;background:#fff;flex-direction:column;justify-content:center;gap:22px;
     transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1);
@@ -176,6 +176,16 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
   .g-d,.g-e,.g-f{grid-column:span 3;grid-row:span 1}
   .g-g,.g-h{grid-column:span 3;grid-row:span 1}
 }
+
+/* ---------- leaders ---------- */
+.motto{border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18);padding:clamp(34px,5vw,64px) 0;margin-bottom:clamp(34px,5vw,56px)}
+.motto-lbl{display:block;font-size:clamp(13px,1.4vw,15px);font-weight:900;letter-spacing:.2em;color:rgba(255,255,255,.7);margin-bottom:clamp(10px,1.6vw,18px)}
+.motto-word{font-size:clamp(38px,10.5vw,128px);font-weight:900;line-height:1.1;letter-spacing:.02em;color:var(--green);white-space:nowrap}
+.motto-en{display:block;margin-top:clamp(12px,1.6vw,20px);font-size:clamp(12px,1.3vw,15px);letter-spacing:.34em;color:rgba(255,255,255,.4)}
+.motto-body{max-width:44em}
+.motto-body p{font-size:clamp(15px,1.6vw,17px);line-height:2.1;color:rgba(255,255,255,.82)}
+.motto-body p + p{margin-top:18px}
+.motto-body .last{color:#fff;font-weight:700}
 
 /* ---------- interview (coming soon) ---------- */
 .itv{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px)}
@@ -308,6 +318,7 @@ br.sp{display:none}
     <a href="#about">私たちに<wbr>ついて</a>
     <a href="#numbers">数字で<wbr>見る<wbr>KMS</a>
     <a href="#people">社員の<wbr>素顔</a>
+    <a href="#leaders">リーダー</a>
     <a href="#interview">社員インタビュー</a>
     <a href="#culture">働く<wbr>環境</a>
     <a href="#jobs">募集要項</a>
@@ -420,12 +431,33 @@ br.sp{display:none}
   </div>
 </section>
 
+<!-- LEADERS -->
+<section class="sec dark" id="leaders">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="en-sub">LEADERS</div>
+      <span class="num">04 ／ リーダー陣</span>
+      <h2>KMSを<wbr>支える、<br>若手リーダー・マネージャー陣。</h2>
+      <p>どんな<wbr>リーダーで<wbr>ありたいか。<wbr>研修の<wbr>中で<wbr>リーダー陣が<wbr>話し合い、<wbr>ひとつの<wbr>合言葉に<wbr>たどり<wbr>着きました。</p>
+    </div>
+    <div class="motto rv">
+      <span class="motto-lbl">リーダーの<wbr>合言葉</span>
+      <p class="motto-word">エンパワーメント</p>
+      <span class="motto-en en">EMPOWERMENT</span>
+    </div>
+    <div class="motto-body rv">
+      <p>自ら<wbr>先頭に<wbr>立って<wbr>動きながら、<wbr>メンバーが<wbr>いつでも<wbr>気軽に<wbr>相談できる<wbr>存在である<wbr>こと。<wbr>上下や<wbr>部署の<wbr>垣根を<wbr>越えて<wbr>信頼を<wbr>つなぎ、<wbr>営業・CAD・製造が<wbr>ひとつの<wbr>チームと<wbr>して<wbr>力を<wbr>発揮できる<wbr>状態を<wbr>つくる<wbr>こと。</p>
+      <p class="last">一人<wbr>ひとりの<wbr>力を<wbr>引き出し、<wbr>任せ、<wbr>支える。<br>それが、<wbr>KMSの<wbr>リーダーが<wbr>大切に<wbr>する<wbr>「エンパワーメント」です。</p>
+    </div>
+  </div>
+</section>
+
 <!-- INTERVIEW -->
 <section class="sec" id="interview" style="background:var(--gray)">
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">INTERVIEW</div>
-      <span class="num">04 ／ 働く<wbr>人の<wbr>声</span>
+      <span class="num">05 ／ 働く<wbr>人の<wbr>声</span>
       <h2>社員インタビュー</h2>
       <p>KMSには<wbr>4つの<wbr>職種が<wbr>あります。<wbr>それぞれの<wbr>現場で<wbr>働く<wbr>メンバーへの<wbr>インタビューを、<wbr>現在準備中です。<wbr>公開まで<wbr>少々<wbr>お待ちください。</p>
     </div>
@@ -462,7 +494,7 @@ br.sp{display:none}
   <div class="sec wrap" style="padding-top:clamp(48px,7vw,90px)">
     <div class="head rv">
       <div class="en-sub">CULTURE</div>
-      <span class="num">05 ／ 働く<wbr>環境</span>
+      <span class="num">06 ／ 働く<wbr>環境</span>
       <h2>働きやすさは、<br>会社の<wbr>成長戦略です。</h2>
     </div>
     <div class="cul rv">
@@ -504,7 +536,7 @@ br.sp{display:none}
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">MESSAGE</div>
-      <span class="num">06 ／ 代表メッセージ</span>
+      <span class="num">07 ／ 代表メッセージ</span>
       <h2>従業員を<wbr>大切に<wbr>する<wbr>ことが、<br>最良の<wbr>成長戦略。</h2>
     </div>
     <div class="msg rv">
@@ -524,7 +556,7 @@ br.sp{display:none}
   <div class="wrap">
     <div class="head rv">
       <div class="en-sub">JOBS</div>
-      <span class="num">07 ／ 募集職種・募集要項</span>
+      <span class="num">08 ／ 募集職種・募集要項</span>
       <h2>募集要項</h2>
       <p>学部<wbr>学科や<wbr>専門知識は<wbr>一切問いません。<wbr>入社後の<wbr>ジョブチェンジ、<wbr>選考途中での<wbr>希望職種の<wbr>変更も<wbr>可能です。</p>
     </div>
@@ -573,7 +605,7 @@ br.sp{display:none}
   <div class="wrap" style="max-width:900px">
     <div class="head rv">
       <div class="en-sub">FAQ</div>
-      <span class="num">08 ／ よく<wbr>ある<wbr>ご質問</span>
+      <span class="num">09 ／ よく<wbr>ある<wbr>ご質問</span>
       <h2>採用に<wbr>関する<wbr>ご質問</h2>
     </div>
     <div class="faq rv">
@@ -643,6 +675,7 @@ br.sp{display:none}
           <a href="#about">私たちに<wbr>ついて</a>
           <a href="#numbers">数字で<wbr>見る<wbr>KMS</a>
           <a href="#people">社員の<wbr>素顔</a>
+          <a href="#leaders">リーダー</a>
           <a href="#interview">社員インタビュー</a>
           <a href="#culture">働く<wbr>環境</a>
           <a href="#jobs">募集要項</a>
