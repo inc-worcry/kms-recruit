@@ -14,8 +14,12 @@ GitHub: https://github.com/inc-worcry/kms-recruit
 ## 差し替えが必要な箇所
 1. **社員インタビュー（4枠）** … 「KMSを支える人たち」セクション内。カードをクリックするとポップアップが開く。
    - 写真：`images/interview/01.jpg`〜`04.jpg` を置き、各カードの `.ph` の先頭に `<img src="images/interview/01.jpg" alt="営業">` を追加（HTML内にコメントで場所を記載済み）。写真を入れると番号は消え、COMING SOONは写真下部の小さい表示に切り替わる
-   - 原稿：各カードの `.itv-detail`（hidden）の中身がそのままポップアップ本文になる。`d-soon`／`d-msg` を消して、以下の形で追加
-     `<p class="d-name">名前</p><p class="d-meta">20XX年入社</p><div class="d-qa"><p class="d-q">質問</p><p class="d-a">回答</p></div>`
+   - 原稿：アンケート（Googleフォーム）の回答から作る。各カードの `.itv-detail`（hidden）の中身がそのままポップアップ本文になる。
+     HTML内にコメントで流し込みテンプレートを入れてあるので、`d-soon`／`d-msg` を削除し、コメントを外して回答を貼る
+   - アンケート：回答用 https://docs.google.com/forms/d/e/1FAIpQLScIwjThSMJ7w3DELgup-GPdS72G912ZYsjvtvqtmiIES-_Sjw/viewform ／
+     編集 https://docs.google.com/forms/d/1XWLdQFubR5OufuHLXm3-kSlzbNhHBHdha5dmQZ4XL8Q/edit ／
+     回答シート https://docs.google.com/spreadsheets/d/14QWKYkVas7zvbqu1-pwODvcAKXyroTOB6dtJiPeIpJk/edit
+     （フォームを作り直す場合は `tools/create-interview-form.gs` を Apps Script で実行）
    - 公開したら、カードの `<span class="soon">COMING SOON</span>` も削除
 2. **ENTRYボタンのリンク** … engage（https://en-gage.net/e-kms_saiyo/）に紐付け済み。
 3. **給与・待遇・休日** … 募集要項テーブルは「説明会でご案内」表記。確定情報が出たら記載。
