@@ -197,8 +197,8 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
 .itv-ttl{font-size:clamp(20px,2.2vw,26px);font-weight:900;line-height:1.2}
 .itv-count{font-size:13px;letter-spacing:.2em;color:var(--muted)}
 .itv-hint{display:none}
-.itv{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,20px)}
-.itv-card{position:relative;aspect-ratio:3/4;overflow:hidden;background:#16181B;color:#fff;cursor:pointer}
+.itv{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.2vw,16px)}
+.itv-card{position:relative;aspect-ratio:7/10;overflow:hidden;background:#16181B;color:#fff;cursor:pointer}
 .itv-card:focus-visible{outline:2px solid var(--green);outline-offset:3px}
 .itv-card::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .itv-card:hover::after,.itv-card:focus-visible::after{transform:scaleX(1)}
@@ -211,9 +211,10 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
 .ph .soon{position:absolute;top:18px;right:16px;display:flex;align-items:center;gap:8px;font-family:Anton;font-size:11px;letter-spacing:.22em;color:var(--green)}
 .ph .soon::before{content:"";width:16px;height:1px;background:var(--green)}
 .ph img ~ .no{display:none}
-.itv-card .cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(40px,5vw,64px) 18px 20px;background:linear-gradient(transparent,rgba(8,9,10,.88))}
+.itv-card .cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(48px,6vw,76px) 18px 20px;background:linear-gradient(transparent,rgba(8,9,10,.3) 38%,rgba(8,9,10,.9))}
 .cap .kicker{display:block;font-size:10.5px;letter-spacing:.24em;color:rgba(255,255,255,.55);margin-bottom:6px}
-.cap .role{display:block;font-size:clamp(15px,1.3vw,18px);font-weight:900;line-height:1.45}
+.cap .role{display:block;font-size:clamp(11.5px,1vw,13px);font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.82);line-height:1.5}
+.cap .pname{display:block;font-size:clamp(17px,1.6vw,22px);font-weight:900;letter-spacing:.04em;line-height:1.35;margin-top:3px}
 .cap .more{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:11.5px;font-weight:700;color:rgba(255,255,255,.8)}
 .cap .more::after{content:"";width:22px;height:1px;background:currentColor;transition:width .35s}
 .itv-card:hover .cap .more::after{width:40px}
@@ -234,8 +235,9 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
 .modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px}
 .modal[hidden]{display:none}
 .modal-bg{position:absolute;inset:0;background:rgba(10,11,13,.72)}
-.modal-card{position:relative;background:#fff;width:100%;max-width:880px;max-height:88vh;overflow-y:auto;display:grid;grid-template-columns:.8fr 1.2fr}
-.modal-ph{min-height:380px}
+.modal-card{position:relative;background:#fff;width:100%;max-width:980px;max-height:90vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1.25fr;align-items:start}
+.modal-card>.modal-ph{position:sticky;top:0;align-self:start;height:min(72vh,540px);min-height:0}
+.modal-ph img{object-position:center 22%}
 .modal-ph .no{font-size:120px}
 .modal-body{padding:clamp(26px,4vw,48px)}
 .modal-close{position:absolute;top:12px;right:12px;z-index:2;width:40px;height:40px;border:0;background:var(--ink);color:#fff;font-size:20px;line-height:1;cursor:pointer}
@@ -247,7 +249,7 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
 .d-qa{border-top:1px solid var(--gray-2);padding-top:18px;margin-top:18px}
 .d-q{font-weight:900;font-size:15px;margin-bottom:8px}
 .d-a{font-size:14px;line-height:2;color:#3A3F45}
-@media(max-width:700px){.modal{padding:0;align-items:flex-end}.modal-card{grid-template-columns:1fr;max-height:92vh}.modal-ph{min-height:0;aspect-ratio:4/3}}
+@media(max-width:700px){.modal{padding:0;align-items:flex-end}.modal-card{grid-template-columns:1fr;max-height:92vh}.modal-card>.modal-ph{position:static;height:auto;aspect-ratio:4/3;min-height:0}}
 
 /* ---------- culture ---------- */
 .cul-hero{position:relative;height:clamp(300px,52vw,540px);overflow:hidden}
@@ -510,92 +512,91 @@ br.sp{display:none}
         </div>
         <p class="itv-hint">横に<wbr>スワイプして<wbr>ご覧ください →</p>
         <div class="itv">
-          <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <!-- 写真を入れるときは .ph の先頭に <img src="images/interview/01.jpg" alt="営業"> を<wbr>追加 -->
-            <div class="ph"><span class="no">01</span><span class="soon">COMING SOON</span></div>
-            <div class="cap"><span class="kicker en">INTERVIEW 01</span><span class="role">営業</span><span class="more">インタビューを<wbr>見る</span></div>
+                    <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="ph"><img src="images/interview/01.jpg" alt="営業 吉永 好輝"><span class="no">01</span></div>
+            <div class="cap">
+              <span class="kicker en">INTERVIEW 01</span>
+              <span class="role">営業</span>
+              <span class="pname">吉永 好輝</span>
+              <span class="more">インタビューを<wbr>見る</span>
+            </div>
             <div class="itv-detail" hidden>
               <span class="d-role">営業</span>
-              <p class="d-soon">COMING SOON</p>
-              <p class="d-msg">現在、<wbr>営業の<wbr>インタビューを<wbr>準備中です。<br>公開まで<wbr>少々<wbr>お待ちください。</p>
-              <!-- ▼ アンケートの回答が届いたら、上の d-soon と d-msg を削除して、このコメントを外す
-              <p class="d-name">山田 太郎</p>
-              <p class="d-meta">営業／202<wbr>1年入社<wbr>（新卒）<wbr>／◯◯大学文系学部<wbr>卒</p>
-              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">社内イベントの<wbr>思い出</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">（回答）</p></div>
-              ▲ -->
+              <p class="d-name">吉永 好輝</p>
+              <p class="d-meta">202<wbr>0年入社<wbr>（新卒）<wbr>／共栄大学教育学部<wbr>卒</p>
+              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">説明会や<wbr>面接に<wbr>共通して<wbr>堅苦しい<wbr>雰囲気を<wbr>感じなかった。<br>面接対応してくれた<wbr>方や<wbr>社長が<wbr>話す内容に、<wbr>今まで<wbr>自分が<wbr>大切だと<wbr>教えられてきた<wbr>ことや<wbr>学ん<wbr>できた<wbr>こと<wbr>（周りの<wbr>人を<wbr>大切に<wbr>する<wbr>こと・<wbr>自分から<wbr>積極的に<wbr>動く<wbr>ことなど）が<wbr>多く<wbr>含まれているように<wbr>感じ、<wbr>社会人と<wbr>して<wbr>学べる<wbr>ことが<wbr>多そうだと<wbr>感じた<wbr>こと。</p></div>
+              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">社内での<wbr>立場と<wbr>して<wbr>指示された<wbr>仕事しかできなかった<wbr>期間を<wbr>経て、<wbr>社員旅行の<wbr>幹事や<wbr>行事ごとの<wbr>司会等の<wbr>個人的な<wbr>仕事を<wbr>頼んで<wbr>もらえるようになった<wbr>瞬間に、<wbr>やりがいとより<wbr>具体的な<wbr>責任を<wbr>感じるようになりました。<br>自分<wbr>一人で<wbr>こなせる<wbr>ものには<wbr>限界が<wbr>あるなかで、<wbr>上司と<wbr>部下を<wbr>問わず<wbr>周りと<wbr>連携して<wbr>達成できた<wbr>瞬間に<wbr>大きな<wbr>やりがいを<wbr>感じますし、<wbr>イベントや<wbr>コミュニケーションを<wbr>重視している<wbr>KMSに<wbr>対して<wbr>少しでも<wbr>貢献できている<wbr>実感が<wbr>あるのも<wbr>大きな<wbr>要素に<wbr>感じます。</p></div>
+              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">社会人と<wbr>してなにかを<wbr>考える<wbr>際の<wbr>基準点が<wbr>見つけられずに、<wbr>入社してからの<wbr>2年ほどは<wbr>だいぶ苦労しましたし、<wbr>先輩方にも<wbr>たくさん<wbr>迷惑を<wbr>掛けました。<br>たくさん<wbr>間<wbr>違えながらも<wbr>先輩たちの<wbr>細かい<wbr>立ち回りや声掛けに<wbr>何度も<wbr>助けられながら、<wbr>少し<wbr>ずつですが<wbr>営業と<wbr>しての<wbr>数字も<wbr>伸びてきて、<wbr>次第に<wbr>任せて<wbr>もらえる<wbr>仕事も<wbr>増えてきました。<br>ここでのくじけずに<wbr>やり続けた<wbr>継続性と<wbr>負けん気が<wbr>自分<wbr>自身の<wbr>長所だと<wbr>再認識し、<wbr>自信を<wbr>取り戻すきっかけに<wbr>なりました。</p></div>
+              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">入社5年目に<wbr>コロナが<wbr>落ち着き、<wbr>社員旅行が<wbr>再開し幹事に<wbr>任命して<wbr>もらいました。<br>準備不足も<wbr>あり、<wbr>段取りが<wbr>悪く<wbr>予定通りの<wbr>進行が<wbr>できなくなる<wbr>可能性すら<wbr>あった<wbr>中で、<wbr>営業の<wbr>先輩方だけではなく、<wbr>工場研修時代から<wbr>お世話に<wbr>なっていた<wbr>他部署の<wbr>先輩方まで<wbr>率先して<wbr>動いてくれた<wbr>ことで、<wbr>何とか<wbr>進行を<wbr>する<wbr>ことができました。<br>この<wbr>経験から、<wbr>任せて<wbr>もらった<wbr>ことは<wbr>しっかり<wbr>準備を<wbr>して<wbr>完ぺきに<wbr>こな<wbr>したいと、<wbr>今まで<wbr>以上に<wbr>強く<wbr>思うようになりました。</p></div>
+              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">8:00 出社・<wbr>メールチェック → 9:00 朝礼・事務作業 → 11:00 納品 → 18:00 帰社・内勤処理 → 19〜20:00 退社</p></div>
+              <div class="d-qa"><p class="d-q">社内イベントの<wbr>思い出</p><p class="d-a">86レース。<wbr>社員旅行中の<wbr>晩御飯や<wbr>ご当地グルメ。</p></div>
+              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">部下を<wbr>誰に<wbr>つけるかと<wbr>なった<wbr>時に、<wbr>迷わず任せて<wbr>もらえる<wbr>立場の<wbr>社員に<wbr>なっておく<wbr>こと。<br>社内での<wbr>プロジェクトと<wbr>営業と<wbr>しての<wbr>成績を<wbr>両立する<wbr>こと。<br>家庭を<wbr>持つこと。</p></div>
+              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">業務内容に<wbr>関しては<wbr>説明会等で<wbr>理解が<wbr>深まるとは<wbr>思いますが、<wbr>そこでは<wbr>見えない<wbr>自分と<wbr>会社との<wbr>相性や<wbr>社内での<wbr>人間関係が<wbr>イメージしきれずに、<wbr>不安に<wbr>思う<wbr>部分が<wbr>あるのが<wbr>ほぼ全員だと<wbr>思います。<br>KMSには、<wbr>前向きに<wbr>全力で<wbr>誰かの<wbr>ために<wbr>頑張る<wbr>人間を<wbr>見捨てるような<wbr>上司は<wbr>いません。<wbr>新しい<wbr>ことへの<wbr>チャレンジを<wbr>受け入れようとする<wbr>体制も<wbr>出来<wbr>上がってきていると<wbr>思います。<br>少しでも<wbr>興味を<wbr>持ってくれた<wbr>なら、<wbr>まずは<wbr>応募して<wbr>もらい<wbr>職場の<wbr>雰囲気を<wbr>見て<wbr>もらうのが<wbr>一番かなと<wbr>思います。<wbr>KMSで<wbr>皆さんを<wbr>待ってます！！</p></div>
             </div>
           </article>
-          <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <!-- 写真を入れるときは .ph の先頭に <img src="images/interview/02.jpg" alt="営業事務"> を<wbr>追加 -->
-            <div class="ph"><span class="no">02</span><span class="soon">COMING SOON</span></div>
-            <div class="cap"><span class="kicker en">INTERVIEW 02</span><span class="role">営業事務</span><span class="more">インタビューを<wbr>見る</span></div>
+                    <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="ph"><img src="images/interview/02.jpg" alt="営業事務 折居 心実"><span class="no">02</span></div>
+            <div class="cap">
+              <span class="kicker en">INTERVIEW 02</span>
+              <span class="role">営業事務</span>
+              <span class="pname">折居 心実</span>
+              <span class="more">インタビューを<wbr>見る</span>
+            </div>
             <div class="itv-detail" hidden>
               <span class="d-role">営業事務</span>
-              <p class="d-soon">COMING SOON</p>
-              <p class="d-msg">現在、<wbr>営業事務の<wbr>インタビューを<wbr>準備中です。<br>公開まで<wbr>少々<wbr>お待ちください。</p>
-              <!-- ▼ アンケートの回答が届いたら、上の d-soon と d-msg を削除して、このコメントを外す
-              <p class="d-name">山田 太郎</p>
-              <p class="d-meta">営業事務／202<wbr>1年入社<wbr>（新卒）<wbr>／◯◯大学文系学部<wbr>卒</p>
-              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">社内イベントの<wbr>思い出</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">（回答）</p></div>
-              ▲ -->
+              <p class="d-name">折居 心実</p>
+              <p class="d-meta">202<wbr>1年入社<wbr>（新卒）<wbr>／戸板女子短期大学卒</p>
+              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">人と<wbr>関わる<wbr>業務内容かつ、<wbr>誰かの<wbr>サポートを<wbr>する<wbr>仕事が<wbr>希望だった<wbr>ためです。<wbr>事務の<wbr>中でも<wbr>営業事務に<wbr>絞って<wbr>就職活動を<wbr>していました。<br>ケーエムエスの<wbr>会社説明会に<wbr>参加した際、<wbr>紹介動画や<wbr>会場の<wbr>壁に<wbr>飾って<wbr>あった<wbr>写真から、<wbr>楽しそうな<wbr>雰囲気や<wbr>温かみを<wbr>感じました。<br>実際に<wbr>入社してみて、<wbr>日々<wbr>楽しいです！<wbr>先輩社員や<wbr>同僚と<wbr>たまに<wbr>飲みや<wbr>食事に<wbr>行くのも<wbr>楽しみの<wbr>1つです。</p></div>
+              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">お客様や<wbr>営業さんから<wbr>感謝を<wbr>された<wbr>ときに<wbr>一番やりがいを<wbr>感じます。<br>見積書や<wbr>発注書を<wbr>作成する<wbr>際は、<wbr>指示や<wbr>確認も<wbr>1度で<wbr>完結するように<wbr>意識しています。<br>相手が<wbr>求めている<wbr>ことを<wbr>先回りで<wbr>想像し、<wbr>希望に<wbr>添えた<wbr>ときや<wbr>うまく<wbr>サポートできた<wbr>ときの<wbr>「ありがとう」が<wbr>仕事の<wbr>活力です！</p></div>
+              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">見積業務と<wbr>発注業務が<wbr>重なった<wbr>ときの<wbr>仕事の<wbr>組み方に<wbr>苦労しました。<br>先輩と<wbr>一緒に<wbr>優先度を<wbr>確認し、<wbr>順番を<wbr>つける<wbr>ことで<wbr>焦る<wbr>ことなく<wbr>業務を<wbr>すすめられるようになりました。<br>それを<wbr>続けている<wbr>おかげで、<wbr>今は<wbr>一人でも<wbr>落ち着いて<wbr>対応する<wbr>ことができています。</p></div>
+              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">基本的に<wbr>ケーエムエスは、<wbr>営業さんと<wbr>事務1<wbr>人ずつペアを<wbr>組んで<wbr>仕事を<wbr>すすめます。<br>ですが<wbr>入社5年目になり、<wbr>複数の<wbr>営業さんの<wbr>アシスタントを<wbr>してみないかと<wbr>声を<wbr>かけて<wbr>もらえた<wbr>時は、<wbr>普段の<wbr>仕事の<wbr>頑張りを<wbr>認めて<wbr>もらえたようで<wbr>とても<wbr>嬉しかったです。<br>今は<wbr>2人の<wbr>営業さんの<wbr>アシスタントと<wbr>して<wbr>日々<wbr>業務を<wbr>行っています。<wbr>大変な<wbr>こともありますが、<wbr>毎日<wbr>やりがいを<wbr>感じています。</p></div>
+              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">8:45 出社 → 9:00 朝礼・掃除 → 9:15 メールチェックし営業さんに<wbr>指示を<wbr>もらう → 10:00 発注業務 → 12:00 昼休み → 14:00 見積業務 → 15:30 休憩 → 17:30 退社</p></div>
+              <div class="d-qa"><p class="d-q">社内イベントの<wbr>思い出</p><p class="d-a">年末年始に<wbr>行われる<wbr>忘年会と<wbr>新年会が<wbr>毎年<wbr>楽しみです！<br>普段は<wbr>異なる<wbr>場所で<wbr>働いている<wbr>部署の<wbr>方に<wbr>会える<wbr>貴重な<wbr>機会でも<wbr>あるので、<wbr>話が<wbr>弾みついつい長話を<wbr>してしまいます。<br>美味しい<wbr>ご飯を<wbr>食べながら、<wbr>仕事の<wbr>話は<wbr>もちろん<wbr>趣味の<wbr>話まで<wbr>でき、<wbr>毎年<wbr>楽しい<wbr>思い出に<wbr>なっています。</p></div>
+              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">上司や<wbr>先輩から<wbr>教えていただいた<wbr>たくさんの<wbr>ことを、<wbr>今度は<wbr>私が<wbr>後輩たちへつないで<wbr>いきたいです。<br>周りに<wbr>しっかりと<wbr>気を<wbr>配り、<wbr>一人<wbr>ひとりの<wbr>小さな<wbr>変化にも<wbr>気づける、<wbr>広い<wbr>視野を<wbr>持った<wbr>人に<wbr>なることが<wbr>大切だと<wbr>思っています。<br>「この<wbr>先輩なら<wbr>頼れる」<wbr>「何でも<wbr>相談しやすい」と<wbr>思って<wbr>もらえるような、<wbr>安心感の<wbr>ある<wbr>先輩を<wbr>目指したいです。</p></div>
+              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">就職活動中は、<wbr>悩むことや<wbr>不安に<wbr>なることが<wbr>多く<wbr>あると<wbr>思います。<br>そんな<wbr>ときは<wbr>一人で<wbr>悩まずに、<wbr>たくさんの<wbr>人に<wbr>相談を<wbr>してみてください。<wbr>きっと<wbr>一人では<wbr>解決できなかった<wbr>悩みも<wbr>解決できると<wbr>思います。<br>素敵な<wbr>会社に<wbr>出会える<wbr>ことを<wbr>祈っています！</p></div>
             </div>
           </article>
-          <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <!-- 写真を入れるときは .ph の先頭に <img src="images/interview/03.jpg" alt="機械系CAD／CAMオペレーター"> を<wbr>追加 -->
-            <div class="ph"><span class="no">03</span><span class="soon">COMING SOON</span></div>
-            <div class="cap"><span class="kicker en">INTERVIEW 03</span><span class="role">機械系CAD／CAMオペレーター</span><span class="more">インタビューを<wbr>見る</span></div>
+                    <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="ph"><img src="images/interview/03.jpg" alt="機械系CAD／CAMオペレーター 押久保 志歩"><span class="no">03</span></div>
+            <div class="cap">
+              <span class="kicker en">INTERVIEW 03</span>
+              <span class="role">機械系CAD／CAMオペレーター</span>
+              <span class="pname">押久保 志歩</span>
+              <span class="more">インタビューを<wbr>見る</span>
+            </div>
             <div class="itv-detail" hidden>
               <span class="d-role">機械系CAD／CAMオペレーター</span>
-              <p class="d-soon">COMING SOON</p>
-              <p class="d-msg">現在、<wbr>機械系CAD／CAMオペレーターの<wbr>インタビューを<wbr>準備中です。<br>公開まで<wbr>少々<wbr>お待ちください。</p>
-              <!-- ▼ アンケートの回答が届いたら、上の d-soon と d-msg を削除して、このコメントを外す
-              <p class="d-name">山田 太郎</p>
-              <p class="d-meta">機械系CAD／CAMオペレーター／202<wbr>1年入社<wbr>（新卒）<wbr>／◯◯大学文系学部<wbr>卒</p>
-              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">社内イベントの<wbr>思い出</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">（回答）</p></div>
-              ▲ -->
+              <p class="d-name">押久保 志歩</p>
+              <p class="d-meta">201<wbr>4年入社<wbr>（新卒）<wbr>／高卒</p>
+              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">会社見学で<wbr>実際に<wbr>CADを<wbr>操作している<wbr>所を<wbr>見て、<wbr>興味を<wbr>持った<wbr>ためです。</p></div>
+              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">図面の<wbr>ちょっと<wbr>した<wbr>不備や<wbr>不明点を<wbr>設計者側へ<wbr>確認する<wbr>場面が<wbr>割と<wbr>あるのですが、<wbr>「小さな<wbr>事でも<wbr>確認を<wbr>して、<wbr>確かな<wbr>仕事と<wbr>していく<wbr>ことが<wbr>何より<wbr>大切です。<wbr>だから<wbr>問い<wbr>合わせを<wbr>してくれて<wbr>ありがとう。<wbr>このような<wbr>確認、<wbr>本当に<wbr>助かります。」と<wbr>いうような<wbr>言葉は<wbr>とても<wbr>記憶に<wbr>残っていますし、<wbr>お客様から<wbr>感謝の<wbr>言葉を<wbr>いただくと<wbr>やりがいに<wbr>感じます。</p></div>
+              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">CADの<wbr>パソコン操作よりも、<wbr>図面を<wbr>正確に<wbr>見られるようになるまで<wbr>苦労しました。<wbr>図面に<wbr>よって<wbr>色々な<wbr>描き方が<wbr>あるので、<wbr>毎日<wbr>たくさんの<wbr>図面を<wbr>見て<wbr>「こういう<wbr>描き方も<wbr>あるんだ」と<wbr>いう<wbr>学びを<wbr>重ね、<wbr>少しずつ<wbr>図面に<wbr>慣れていきました。</p></div>
+              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">1人で<wbr>出来るようになるまで、<wbr>ダブルチェックを<wbr>して<wbr>もらいました。</p></div>
+              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">8:15 出社・<wbr>1日の<wbr>予定を<wbr>立てる → 8:35 掃除 → 8:40 朝礼 → 8:45 業務<wbr>（教育、<wbr>質問対応など）<wbr>→ 12:00 昼休み → 13:00 業務<wbr>（プログラム作成、<wbr>お客様へ<wbr>図面の<wbr>問い<wbr>合わせ、<wbr>チェック作業など）<wbr>→ 17:50 業務終了</p></div>
+              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">現在マニュアルが<wbr>ない<wbr>業務に<wbr>ついて、<wbr>現状の<wbr>仕様ややり方を<wbr>記載した<wbr>マニュアルを<wbr>作成し、<wbr>新しい<wbr>業務への<wbr>ハードルを<wbr>下げる<wbr>こと。</p></div>
+              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">覚える<wbr>ことは<wbr>多いかもしれませんが、<wbr>未経験スタートの<wbr>人が<wbr>ほとんどです。<wbr>自分に<wbr>できるかなと<wbr>いう<wbr>不安は<wbr>あると<wbr>思いますが、<wbr>いきなり全てではなく<wbr>少し<wbr>ずつ段階を<wbr>踏んで<wbr>覚えていくので、<wbr>安心して<wbr>貰えればと<wbr>思います。</p></div>
             </div>
           </article>
-          <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <!-- 写真を入れるときは .ph の先頭に <img src="images/interview/04.jpg" alt="マシンオペレーター"> を<wbr>追加 -->
-            <div class="ph"><span class="no">04</span><span class="soon">COMING SOON</span></div>
-            <div class="cap"><span class="kicker en">INTERVIEW 04</span><span class="role">マシンオペレーター</span><span class="more">インタビューを<wbr>見る</span></div>
+                    <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="ph"><img src="images/interview/04.jpg" alt="マシンオペレーター 島田 豊輝"><span class="no">04</span></div>
+            <div class="cap">
+              <span class="kicker en">INTERVIEW 04</span>
+              <span class="role">マシンオペレーター</span>
+              <span class="pname">島田 豊輝</span>
+              <span class="more">インタビューを<wbr>見る</span>
+            </div>
             <div class="itv-detail" hidden>
               <span class="d-role">マシンオペレーター</span>
-              <p class="d-soon">COMING SOON</p>
-              <p class="d-msg">現在、<wbr>マシンオペレーターの<wbr>インタビューを<wbr>準備中です。<br>公開まで<wbr>少々<wbr>お待ちください。</p>
-              <!-- ▼ アンケートの回答が届いたら、上の d-soon と d-msg を削除して、このコメントを外す
-              <p class="d-name">山田 太郎</p>
-              <p class="d-meta">マシンオペレーター／202<wbr>1年入社<wbr>（新卒）<wbr>／◯◯大学文系学部<wbr>卒</p>
-              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">社内イベントの<wbr>思い出</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">（回答）</p></div>
-              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">（回答）</p></div>
-              ▲ -->
+              <p class="d-name">島田 豊輝</p>
+              <p class="d-meta">202<wbr>3年入社<wbr>（新卒）<wbr>／九州東海大学 工学部 電気電子情報工学科卒</p>
+              <div class="d-qa"><p class="d-q">KMSに<wbr>入社を<wbr>決めた<wbr>理由は？</p><p class="d-a">工場で<wbr>アルバイトを<wbr>していたので<wbr>製造業に<wbr>興味が<wbr>あり、<wbr>面接を<wbr>受けました。<br>面接を<wbr>受けた<wbr>とき、<wbr>明るい<wbr>会社だと<wbr>感じました。<wbr>実際に<wbr>工場見学に<wbr>行った<wbr>ときに、<wbr>面接だけでは<wbr>感じなかった<wbr>雰囲気と<wbr>職場環境に<wbr>魅力を<wbr>感じて<wbr>入社を<wbr>希望しました。</p></div>
+              <div class="d-qa"><p class="d-q">仕事で<wbr>一番やりがいを<wbr>感じる<wbr>瞬間は？</p><p class="d-a">前日に<wbr>次の<wbr>予定を<wbr>見て<wbr>イメージトレーニングを<wbr>してから、<wbr>1日の<wbr>稼働目標を<wbr>目安に<wbr>して<wbr>時間を<wbr>無駄に<wbr>せず効率よく<wbr>仕事する<wbr>ことが<wbr>やりがいです。</p></div>
+              <div class="d-qa"><p class="d-q">入社して<wbr>大変だった<wbr>ことと、<wbr>それを<wbr>どう<wbr>乗り<wbr>越えたか</p><p class="d-a">仕事を<wbr>覚える<wbr>ことが<wbr>大変でした。<br>はじめて<wbr>触る<wbr>機械と<wbr>見た<wbr>ことない<wbr>文字が<wbr>多すぎて、<wbr>ノートに<wbr>隙間が<wbr>なくなる<wbr>くらいまで<wbr>メモを<wbr>書いて、<wbr>それだけだと<wbr>覚えられなかったので、<wbr>声に<wbr>出しながら<wbr>確認を<wbr>たくさんしました。</p></div>
+              <div class="d-qa"><p class="d-q">上司や<wbr>先輩に<wbr>助けられた<wbr>・任せて<wbr>もらえた<wbr>エピソード</p><p class="d-a">未だに<wbr>わからない<wbr>ことが<wbr>多く<wbr>あり、<wbr>その<wbr>都度<wbr>質問した<wbr>ときに<wbr>対策や<wbr>アドバイスを<wbr>くれました。</p></div>
+              <div class="d-qa"><p class="d-q">ある<wbr>1日の<wbr>スケジュール</p><p class="d-a">8:30 出社・掃除 → 8:35 朝礼 → 8:40 仕事 → 10:00 休憩 → 10:15 仕事 → 12:00 昼休み → 13:00 仕事 → 15:00 休憩 → 15:15 仕事 → 17:50 退社</p></div>
+              <div class="d-qa"><p class="d-q">社内イベントの<wbr>思い出</p><p class="d-a">社員旅行、<wbr>新年会。</p></div>
+              <div class="d-qa"><p class="d-q">これからの<wbr>目標</p><p class="d-a">仕事でも<wbr>プライベートでも、<wbr>マイナスな<wbr>考えを<wbr>減らす<wbr>こと。</p></div>
+              <div class="d-qa"><p class="d-q">応募を<wbr>考えている<wbr>方<wbr>へ<wbr>ひとこと</p><p class="d-a">優しい<wbr>先輩が<wbr>たくさん<wbr>居て<wbr>とても<wbr>働きやすく、<wbr>イベントが<wbr>多く<wbr>とても<wbr>楽しい<wbr>会社です！</p></div>
             </div>
           </article>
         </div>
