@@ -211,7 +211,25 @@ header.solid .navtoggle span,.navopen .navtoggle span{background:var(--ink)}
 .ph .soon{position:absolute;top:18px;right:16px;display:flex;align-items:center;gap:8px;font-family:Anton;font-size:11px;letter-spacing:.22em;color:var(--green)}
 .ph .soon::before{content:"";width:16px;height:1px;background:var(--green)}
 .ph img ~ .no{display:none}
-.itv-card .cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(48px,6vw,76px) 18px 20px;background:linear-gradient(transparent,rgba(8,9,10,.3) 38%,rgba(8,9,10,.9))}
+.itv-card{border:1px solid rgba(255,255,255,.1)}
+.itv-card .ph::after{
+  content:"";position:absolute;left:0;right:0;top:0;height:30%;
+  background:linear-gradient(rgba(8,9,10,.42),transparent);pointer-events:none;
+}
+.itv-card .brand{
+  position:absolute;top:14px;left:15px;width:clamp(34px,3.2vw,44px);height:auto;z-index:2;
+  opacity:.92;filter:drop-shadow(0 1px 6px rgba(0,0,0,.5));transition:opacity .35s,transform .5s;
+}
+.itv-card:hover .brand{opacity:1;transform:translateY(-2px)}
+.itv-card .no{
+  position:absolute;top:10px;right:14px;left:auto;z-index:2;
+  font-family:Anton;font-size:clamp(30px,3.4vw,42px);line-height:1;
+  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.42);
+}
+.itv-card .ph img ~ .no{display:block}
+.itv-card .cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(52px,7vw,84px) 18px 20px;background:linear-gradient(transparent,rgba(8,9,10,.25) 34%,rgba(8,9,10,.92))}
+.cap .pname::after{content:"";display:block;width:26px;height:2px;background:var(--green);margin-top:9px;transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.itv-card:hover .cap .pname::after{width:52px}
 .cap .kicker{display:block;font-size:10.5px;letter-spacing:.24em;color:rgba(255,255,255,.55);margin-bottom:6px}
 .cap .role{display:block;font-size:clamp(11.5px,1vw,13px);font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.82);line-height:1.5}
 .cap .pname{display:block;font-size:clamp(17px,1.6vw,22px);font-weight:900;letter-spacing:.04em;line-height:1.35;margin-top:3px}
@@ -513,7 +531,7 @@ br.sp{display:none}
         <p class="itv-hint">横に<wbr>スワイプして<wbr>ご覧ください →</p>
         <div class="itv">
                     <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <div class="ph"><img src="images/interview/01.jpg" alt="営業 吉永 好輝"><span class="no">01</span></div>
+            <div class="ph"><img src="images/interview/01.jpg" alt="営業 吉永 好輝"><span class="no">01</span><img class="brand" src="images/kms-mark-white.png" alt=""></div>
             <div class="cap">
               <span class="kicker en">INTERVIEW 01</span>
               <span class="role">営業</span>
@@ -535,7 +553,7 @@ br.sp{display:none}
             </div>
           </article>
                     <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <div class="ph"><img src="images/interview/02.jpg" alt="営業事務 折居 心実"><span class="no">02</span></div>
+            <div class="ph"><img src="images/interview/02.jpg" alt="営業事務 折居 心実"><span class="no">02</span><img class="brand" src="images/kms-mark-white.png" alt=""></div>
             <div class="cap">
               <span class="kicker en">INTERVIEW 02</span>
               <span class="role">営業事務</span>
@@ -557,7 +575,7 @@ br.sp{display:none}
             </div>
           </article>
                     <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <div class="ph"><img src="images/interview/03.jpg" alt="機械系CAD／CAMオペレーター 押久保 志歩"><span class="no">03</span></div>
+            <div class="ph"><img src="images/interview/03.jpg" alt="機械系CAD／CAMオペレーター 押久保 志歩"><span class="no">03</span><img class="brand" src="images/kms-mark-white.png" alt=""></div>
             <div class="cap">
               <span class="kicker en">INTERVIEW 03</span>
               <span class="role">機械系CAD／CAMオペレーター</span>
@@ -578,7 +596,7 @@ br.sp{display:none}
             </div>
           </article>
                     <article class="itv-card" tabindex="0" role="button" aria-haspopup="dialog">
-            <div class="ph"><img src="images/interview/04.jpg" alt="マシンオペレーター 島田 豊輝"><span class="no">04</span></div>
+            <div class="ph"><img src="images/interview/04.jpg" alt="マシンオペレーター 島田 豊輝"><span class="no">04</span><img class="brand" src="images/kms-mark-white.png" alt=""></div>
             <div class="cap">
               <span class="kicker en">INTERVIEW 04</span>
               <span class="role">マシンオペレーター</span>
